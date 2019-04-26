@@ -24,7 +24,7 @@ class TodayDoneCell: TableCell {
 				return
 			}
 			
-			cell.backgroundColor = .clear
+			cell.backgroundColor = Scheme.Backgrounddark.color
 			done.iconImage.image = done.iconImage.image?.withRenderingMode(.alwaysTemplate)
 		}
 	}

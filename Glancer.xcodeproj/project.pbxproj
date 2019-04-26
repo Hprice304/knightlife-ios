@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C5639D22738DBB00A9202B /* NightModePrefsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */; };
+		22C5639F2273955100A9202B /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5639E2273955100A9202B /* DarkModeManager.swift */; };
+		22C563A12273959100A9202B /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C563A02273959100A9202B /* ShowDarkStorage.swift */; };
 		5BD072481C74AEB40074B56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD072471C74AEB40074B56D /* Main.storyboard */; };
 		5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD285DC1B03CF29007A0472 /* AppDelegate.swift */; };
 		5BD285E41B03CF29007A0472 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD285E31B03CF29007A0472 /* Images.xcassets */; };
@@ -255,6 +258,9 @@
 
 /* Begin PBXFileReference section */
 		18D275F10167B98717447A7C /* Pods-TodayWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget.release.xcconfig"; sourceTree = "<group>"; };
+		22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModePrefsModule.swift; sourceTree = "<group>"; };
+		22C5639E2273955100A9202B /* DarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeManager.swift; sourceTree = "<group>"; };
+		22C563A02273959100A9202B /* ShowDarkStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDarkStorage.swift; sourceTree = "<group>"; };
 		2CA411407FAA1EF6BCD02F68 /* Pods_TodayWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B55DC2C1B27B21500D55EB9 /* Glancer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Glancer.entitlements; sourceTree = "<group>"; };
 		5BD072471C74AEB40074B56D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -459,6 +465,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22C5639B22738D9300A9202B /* NightMode */ = {
+			isa = PBXGroup;
+			children = (
+				22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */,
+			);
+			name = NightMode;
+			sourceTree = "<group>";
+		};
+		22C563A22273999E00A9202B /* Dark Mode */ = {
+			isa = PBXGroup;
+			children = (
+				22C563A3227399C100A9202B /* Storage */,
+				22C5639E2273955100A9202B /* DarkModeManager.swift */,
+			);
+			name = "Dark Mode";
+			sourceTree = "<group>";
+		};
+		22C563A3227399C100A9202B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				22C563A02273959100A9202B /* ShowDarkStorage.swift */,
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
 		2760815A1B310CA4470DF205 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +895,7 @@
 		C051F1F1210FF81E004C064F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				22C5639B22738D9300A9202B /* NightMode */,
 				C02E5553211FA42700043C9E /* Events */,
 				C0600117211B27E500ECAD1A /* Blocks */,
 				C05BD67B2110E44300B5B399 /* Lunch */,
@@ -1391,6 +1423,7 @@
 		C0CB9C0D1FE4610C00437C5D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				22C563A22273999E00A9202B /* Dark Mode */,
 				C08B7471217A784E00E7BA26 /* Planner */,
 				C0600118211B27F200ECAD1A /* Block Meta */,
 				C0791CA22116B84C0066CE62 /* Push */,
@@ -1542,7 +1575,7 @@
 				TargetAttributes = {
 					5BD285D61B03CF29007A0472 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = P57BN8GJ33;
+						DevelopmentTeam = PZYR97VFVH;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1562,7 +1595,7 @@
 					};
 					C01A6C492118C892000B7442 = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = P57BN8GJ33;
+						DevelopmentTeam = PZYR97VFVH;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1580,6 +1613,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1686,7 +1720,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Glancer/Pods-Glancer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Glancer/Pods-Glancer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AddictiveLib/AddictiveLib.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
@@ -1705,7 +1739,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Glancer/Pods-Glancer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Glancer/Pods-Glancer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1745,6 +1779,7 @@
 				C02A2B171FAD539E00D3A9CD /* DaySchedule.swift in Sources */,
 				C0CAF2CE210C223C001A69BF /* LunchController.swift in Sources */,
 				C03BA78A21209AE400AB9DA2 /* PushUnboxRefresh.swift in Sources */,
+				22C5639D22738DBB00A9202B /* NightModePrefsModule.swift in Sources */,
 				C0C176591FAA5F450059E956 /* Scheme.swift in Sources */,
 				C0679147211BF3A500628098 /* UIColor+Core.swift in Sources */,
 				C0815912211B46DE00522B25 /* SettingsColorPickerController.swift in Sources */,
@@ -1752,6 +1787,7 @@
 				C0791CA42116B86F0066CE62 /* PushNotificationManager.swift in Sources */,
 				C09B41D0211378BD00D636D7 /* TableSection+Core.swift in Sources */,
 				C0711B0320DAC3BE009243CC /* TimeDuration.swift in Sources */,
+				22C5639F2273955100A9202B /* DarkModeManager.swift in Sources */,
 				C0791CA62117E7A20066CE62 /* NotificationManager.swift in Sources */,
 				C0BD0F9B2120CAA600C8F403 /* NoticesController.swift in Sources */,
 				5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */,
@@ -1825,6 +1861,7 @@
 				C0FCDBD0210AB5F60080A883 /* EventAttachmentView.swift in Sources */,
 				C0A1FB162001B36C004146CE /* ScheduleVariationStorage.swift in Sources */,
 				C060011E211B291A00ECAD1A /* BlockMetaID.swift in Sources */,
+				22C563A12273959100A9202B /* ShowDarkStorage.swift in Sources */,
 				C0600121211B29C400ECAD1A /* BlockMetaStorage.swift in Sources */,
 				C05F5E851FAE542D00724F42 /* SportSeason.swift in Sources */,
 				C04D1EC4210FD7B90001C99C /* LunchItemCell.swift in Sources */,
@@ -2054,7 +2091,8 @@
 				CODE_SIGN_ENTITLEMENTS = Glancer/Glancer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P57BN8GJ33;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZYR97VFVH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2068,7 +2106,7 @@
 					"$(SDKROOT)/usr/lib/system",
 					"$(SDKROOT)/usr/lib/system/introspection",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLife;
+				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLifeDark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2090,7 +2128,8 @@
 				CODE_SIGN_ENTITLEMENTS = Glancer/Glancer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P57BN8GJ33;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZYR97VFVH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2104,8 +2143,9 @@
 					"$(SDKROOT)/usr/lib/system",
 					"$(SDKROOT)/usr/lib/system/introspection",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLife;
+				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLifeDark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -2126,15 +2166,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = P57BN8GJ33;
+				DEVELOPMENT_TEAM = PZYR97VFVH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLife.TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLifeDark.TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 4.0;
@@ -2156,14 +2197,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P57BN8GJ33;
+				DEVELOPMENT_TEAM = PZYR97VFVH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = TodayWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLife.TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = MAD.BBN.KnightLifeDark.TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

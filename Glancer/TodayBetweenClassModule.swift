@@ -31,12 +31,12 @@ class TodayBetweenClassModule: TableModule {
 		let state = analyst.getCourse() == nil ? "\(analyst.getDisplayName()) starting soon" : "Get to \(analyst.getDisplayName())"
 		
 		let todaySection = self.addSection()
-		todaySection.addCell(TodayStatusCell(state: state, minutes: self.minutesUntil, image: UIImage(named: "icon_class")!, color: analyst.getColor()))
+        todaySection.addCell(TodayStatusCell(state: state, minutes: self.minutesUntil, image: UIImage(named: "icon_class")!, color: analyst.getColor(), background: UIColor.clear))
 		
 		self.addModule(BlockListModule(controller: self.controller, bundle: self.bundle, title: nil, blocks: [ self.nextBlock ], options: [ .topBorder, .bottomBorder ]))
 		
 		let section = self.addSection()
-		section.addSpacerCell().setHeight(30)
+		section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(30)
 		
 		let upcomingBlocks = self.bundle.schedule.getBlocksAfter(self.nextBlock)
 		
@@ -46,7 +46,7 @@ class TodayBetweenClassModule: TableModule {
 			self.addModule(AfterSchoolEventsModule(bundle: self.bundle, title: "After School", options: [ .bottomBorder ]))
 		}
 		
-		self.addSection().addSpacerCell().setHeight(35)
+		self.addSection().addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 }

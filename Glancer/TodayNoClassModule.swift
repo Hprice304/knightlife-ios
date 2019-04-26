@@ -33,7 +33,7 @@ class TodayNoClassModule: TableModule {
 			self.addModule(TodayNoClassWithTomorrowModule(controller: self.controller, table: self.table, today: self.today, tomorrow: self.tomorrow!))
 		}
 		
-		self.addSection().addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		self.addSection().addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 }

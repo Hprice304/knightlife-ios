@@ -30,6 +30,8 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "Day") as? DayController else {
 			return
 		}
+        
+    
 		
 		controller.date = date
 		self.navigationController?.pushViewController(controller, animated: true)
@@ -40,8 +42,10 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
-				
 		self.calendarView.controller = self
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
 		
 		self.fetchUpcoming {
 			self.tableHandler.reload()
@@ -55,7 +59,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 
 		self.calendarView.setupViews()
 		self.setupNavigation()
-
 		self.tableHandler.reload()
 	}
 
@@ -208,7 +211,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		
 		let newSection = layout.addSection()
 		newSection.addDivider()
-		newSection.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		newSection.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
 	}
 	
 	func reloadData() {

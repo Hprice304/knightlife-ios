@@ -28,9 +28,9 @@ class BlocksPrefCell: TableCell {
 			guard let prefCell = cell as? UIBlocksPrefCell else {
 				return
 			}
-			
+			prefCell.backgroundColor = Scheme.Backgrounddark.color
 			prefCell.titleLabel.text = meta.block.displayName
-			prefCell.titleLabel.textColor = meta.color
+			prefCell.titleLabel.textColor = Scheme.text.color
 		}
 	}
 	

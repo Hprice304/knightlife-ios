@@ -12,7 +12,7 @@ import AddictiveLib
 
 class TodayStatusCell: TableCell {
 	
-	init(state: String, minutes: Int, image: UIImage, color: UIColor) {
+    init(state: String, minutes: Int, image: UIImage, color: UIColor, background: UIColor) {
 		super.init("todaystatus", nib: "TodayStatusCell")
 		
 		self.setSelectionStyle(.none)
@@ -25,7 +25,7 @@ class TodayStatusCell: TableCell {
 				return
 			}
 			
-			todayCell.backgroundColor = .clear
+			todayCell.backgroundColor = Scheme.Backgrounddark.color
 			
 			let hours: Int = Int(floor(Double(minutes / 60)))
 			let minutes: Int = minutes % 60

@@ -23,7 +23,7 @@ class LunchPrefsModule: TableModule {
 		})
 
 		section.addDivider()
-		section.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 }

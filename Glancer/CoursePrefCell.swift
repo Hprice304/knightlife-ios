@@ -30,8 +30,7 @@ class CoursePrefCell: TableCell {
 				return
 			}
 			
-			let selectedBackground = UIView()
-			selectedBackground.backgroundColor = Scheme.backgroundMedium.color
+			prefCell.backgroundColor = Scheme.Backgrounddark.color
 
 			prefCell.blockStack.isHidden = false
 			
@@ -39,6 +38,7 @@ class CoursePrefCell: TableCell {
 			prefCell.titleLabel.textColor = course.color
 			
 			prefCell.blockLabel.text = course.courseSchedule.block.displayName
+            prefCell.blockLabel.textColor = Scheme.text.color
 			
 			prefCell.tagImage.image = prefCell.tagImage.image?.withRenderingMode(.alwaysTemplate)
 		}

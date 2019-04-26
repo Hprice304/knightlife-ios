@@ -30,7 +30,8 @@ class ErrorCell: TableCell {
 		self.setCallback() {
 			template, cell in
 			
-			cell.backgroundColor = UIColor.clear
+			cell.backgroundColor = Scheme.Backgrounddark.color
+            
 		}
 	}
 	
@@ -38,6 +39,8 @@ class ErrorCell: TableCell {
 
 class UIErrorCell: UITableViewCell {
 	
-	
-	
+    @IBOutlet weak var notLoad: UILabel!
+    @IBOutlet weak var tryAgain: UILabel!
+    
+    
 }

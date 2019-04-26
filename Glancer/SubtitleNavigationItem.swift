@@ -22,6 +22,7 @@ class SubtitleNavigationItem: UINavigationItem {
 		}
 	}
 	
+    
 	@IBInspectable var subtitle: String? {
 		didSet {
 			self.subtitleLabel.isHidden = self.subtitle == nil
@@ -29,9 +30,9 @@ class SubtitleNavigationItem: UINavigationItem {
 		}
 	}
 	
-	@IBInspectable var subtitleColor: UIColor = UIColor.darkGray {
+	@IBInspectable var subtitleColor: UIColor = Scheme.navtext.color {
 		didSet {
-			self.subtitleLabel.textColor = self.subtitleColor
+			self.subtitleLabel.textColor = Scheme.text.color
 		}
 	}
 	
@@ -51,7 +52,7 @@ class SubtitleNavigationItem: UINavigationItem {
 		stackView.alignment = .center
 		
 		let titleLabel = UILabel()
-		titleLabel.textColor = UIColor.darkText
+		titleLabel.textColor = Scheme.text.color
 		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
 		titleLabel.text = self.title
 		

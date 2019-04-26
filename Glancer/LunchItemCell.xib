@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="4u5-Ev-Ecw" firstAttribute="leading" secondItem="LDL-gk-UQs" secondAttribute="leading" constant="20" id="CPC-7Q-2nn"/>
                         <constraint firstAttribute="height" constant="45" id="lFn-wd-6md"/>
@@ -41,7 +40,6 @@
                             <rect key="frame" x="20" y="0.0" width="335" height="48"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="6ki-qg-2KK" firstAttribute="top" secondItem="MTt-ug-cmp" secondAttribute="top" id="Lu4-Ht-IHZ"/>
                         <constraint firstItem="6ki-qg-2KK" firstAttribute="leading" secondItem="MTt-ug-cmp" secondAttribute="leading" constant="20" id="O6R-jl-Jzw"/>
@@ -50,7 +48,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="AoV-cw-XbL" firstAttribute="trailing" secondItem="LDL-gk-UQs" secondAttribute="trailing" id="Fah-kB-D3K"/>
                 <constraint firstItem="MTt-ug-cmp" firstAttribute="top" secondItem="LDL-gk-UQs" secondAttribute="bottom" id="MEf-7v-sLh"/>

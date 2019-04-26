@@ -22,6 +22,9 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +56,8 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 			guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "Color") as? SettingsColorPickerController else {
 				return
 			}
-
+            
+            
 			controller.color = self.course.color
 			controller.colorPicked = {
 				color in
@@ -67,7 +71,7 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		about.addDivider()
 		
-		about.addSpacerCell().setBackgroundColor(.clear).setHeight(35 / 2)
+		about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35 / 2)
 		
 		about.addDivider()
 		
@@ -77,7 +81,7 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		about.addDivider()
 		
-		about.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 		
 		let scheduling = layout.addSection()
 		scheduling.addDivider()
@@ -127,7 +131,7 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		scheduling.addDivider()
 		
-		scheduling.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		scheduling.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 
 		let notifications = layout.addSection()
 		notifications.addDivider()
@@ -152,7 +156,7 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		notifications.addDivider()
 		
-		notifications.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		notifications.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 		
 		let delete = layout.addSection()
 		delete.addDivider()
@@ -162,7 +166,7 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		})
 		
 		delete.addDivider()
-		delete.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		delete.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 	private func showChangeName() {
@@ -188,9 +192,6 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 			textField.placeholder = "e.g. English"
 			textField.text = self.course.name
 			
-			NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidChange, object: textField, queue: OperationQueue.main) { (notification) in
-				saveAction.isEnabled = textField.text!.trimmingCharacters(in: .whitespaces).count > 0
-			}
 		})
 
 		self.present(alert, animated: true)
@@ -320,9 +321,10 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 	}
 	
 	private func showDelete() {
-		let alert = UIAlertController(title: "Remove Class", message: "This action cannot be undone.", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Remove Class", message: "This action cannot be undone.", preferredStyle: .actionSheet)
+
 		
-		alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive) {
+		alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive) {
 			action in
 			
 			CourseManager.instance.removeCourse(self.course)

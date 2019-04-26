@@ -15,17 +15,20 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 	
 	@IBOutlet weak var tableView: UITableView!
 	private(set) var tableHandler: TableHandler!
-	
+    
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
+//        navigationController?.navigationBar.tintColor = Scheme.Backgrounddark.color
 		self.tableHandler.reload()
 	}
 	
@@ -35,6 +38,7 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 		layout.addModule(VariationPrefsModule())
 		layout.addModule(EventsPrefsModule(controller: self))
 		layout.addModule(LunchPrefsModule())
+        layout.addModule(NightModePrefsModule())
 		layout.addModule(BottomPrefsModule())
 	}
 	

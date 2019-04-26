@@ -12,8 +12,9 @@ import SnapKit
 
 class CalendarView: UIView {
 	
+    
 	var controller: CalendarController!
-	
+    
 	@IBOutlet weak private var weekAStackView: UIStackView!
 	@IBOutlet weak private var weekBStackView: UIStackView!
 	@IBOutlet weak private var weekCStackView: UIStackView!
@@ -23,6 +24,7 @@ class CalendarView: UIView {
 		return [self.weekAStackView, self.weekBStackView, self.weekCStackView, self.weekDStackView]
 	}()
 	
+    
 	private var startOfWeek: Date!
 	
 	private var dates: [[Date]] {
@@ -59,19 +61,19 @@ class CalendarView: UIView {
 					button.addTarget(self, action: #selector(self.dayButtonClicked(_:)), for: .touchUpInside)
 					
 					button.setTitle("\(day.day)", for: .normal)
-					
-					if let label = button.titleLabel {
-						if day.webSafeDate == today.webSafeDate {
-							button.setTitleColor(Scheme.blue.color, for: .normal)
-							label.font = UIFont.systemFont(ofSize: 16.0, weight: .heavy)
-						} else if day.month != today.month {
-							button.setTitleColor(Scheme.lightText.color, for: .normal)
-							label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
-						} else {
-							button.setTitleColor(Scheme.text.color, for: .normal)
-							label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
-						}
-					}
+                    
+                    if let label = button.titleLabel {
+                        if day.webSafeDate == today.webSafeDate {
+                            button.setTitleColor(Scheme.blue.color, for: .normal)
+                            label.font = UIFont.systemFont(ofSize: 16.0, weight: .heavy)
+                        } else if day.month != today.month {
+                            button.setTitleColor(Scheme.lightText.color, for: .normal)
+                            label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
+                        } else {
+                            button.setTitleColor(Scheme.text.color, for: .normal)
+                            label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
+                        }
+                    }
 				}
 			}
 		}

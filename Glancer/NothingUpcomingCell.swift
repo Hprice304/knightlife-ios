@@ -20,14 +20,18 @@ class NothingUpcomingCell: TableCell {
 		self.setCallback() {
 			template, cell in
 			
-			cell.backgroundColor = .clear
+			cell.backgroundColor = Scheme.spacercolor.color
+
+            
 		}
 	}
-	
+    private func layout(cell: UINothingUpcomingCell) {
+        cell.nothingLabel.textColor = Scheme.text.color
+    }
 }
 
 class UINothingUpcomingCell: UITableViewCell {
-	
-	
+    
+	@IBOutlet weak var nothingLabel: UILabel!
 	
 }

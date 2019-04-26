@@ -24,7 +24,7 @@ class NoClassCell: TableCell {
 				return
 			}
 			
-			noClass.backgroundColor = .clear
+			noClass.backgroundColor = Scheme.Backgrounddark.color
 			noClass.iconImage.image = noClass.iconImage.image?.withRenderingMode(.alwaysTemplate)
 		}
 	}

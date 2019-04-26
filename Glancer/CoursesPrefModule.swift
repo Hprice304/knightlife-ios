@@ -31,12 +31,12 @@ class CoursesPrefModule: TableModule {
 			section.addDivider()
 		}
 		
-		section.addSpacerCell().setBackgroundColor(.clear).setHeight(15)
+		section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(15)
 		section.addCell(PrefsActionCell(title: "Add", image: UIImage(named: "icon_add")!) {
 			self.openAddMenu()
 		})
 		
-		section.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 	private func openAddMenu() {
@@ -62,9 +62,6 @@ class CoursesPrefModule: TableModule {
 			
 			textField.placeholder = "e.g. English"
 			
-			NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidChange, object: textField, queue: OperationQueue.main) { (notification) in
-				saveAction.isEnabled = textField.text!.trimmingCharacters(in: .whitespaces).count > 0
-			}
 		})
 		
 		self.controller.present(alert, animated: true)

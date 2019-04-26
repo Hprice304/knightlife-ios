@@ -24,13 +24,14 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 	var bundleDownloaded: Bool { return bundle != nil || bundleError != nil }
 	
 	override func viewDidLoad() {
-		super.viewDidLoad()
-		
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
-		
 		self.registerListeners()
 		self.reloadData()
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        super.viewDidLoad()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {		
@@ -94,6 +95,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		self.setupMailButtonItem()
 		
 		self.navigationItem.title = self.date.prettyDate
+        
 		
 		if let subtitleItem = self.navigationItem as? SubtitleNavigationItem {
 			if let bundle = self.bundle {
@@ -209,7 +211,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		layout.addModule(BlockListModule(controller: self, bundle: self.bundle!, title: nil, blocks: self.bundle!.schedule.getBlocks(), options: [.topBorder, .bottomBorder]))
 		layout.addModule(AfterSchoolEventsModule(bundle: self.bundle!, title: "After School", options: [.bottomBorder]))
 		
-		layout.addSection().addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		layout.addSection().addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
 	}
 	
 	func openLunchMenu(menu: LunchMenu) {

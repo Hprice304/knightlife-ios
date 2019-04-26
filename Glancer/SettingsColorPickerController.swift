@@ -23,7 +23,9 @@ class SettingsColorPickerController: UIViewController {
 		super.viewDidLoad()
 		
 		self.findColorViews()
-		
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
 		if let colorHex = self.color.toHex, let selectedView = self.colorViews[colorHex] {
 			selectedView.select()
 			self.selected = selectedView

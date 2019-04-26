@@ -14,6 +14,7 @@ class BlockCell: TableCell {
 	
 	private let controller: DayController
 	private let composite: CompositeBlock
+    
 	
 	init(controller: DayController, composite: CompositeBlock) {
 		self.controller = controller
@@ -43,11 +44,23 @@ class BlockCell: TableCell {
 		cell.nameLabel.text = analyst.getDisplayName()
 		cell.blockNameLabel.text = block.id.displayName
 		
+        cell.backgroundColor = Scheme.Backgrounddark.color
+        cell.attachmentsStack.backgroundColor = Scheme.Backgrounddark.color
+        
 		cell.fromLabel.text = block.time.start.prettyTime
 		cell.toLabel.text = block.time.end.prettyTime
 		
 		cell.locationLabel.text = analyst.getLocation()
-		
+        
+//        Coloring
+        cell.fromLabel.textColor = Scheme.lightText.color
+        cell.toLabel.textColor = Scheme.lightText.color
+        
+        
+        if cell.blockNameLabel.textColor == UIColor.lightGray {
+            cell.blockNameLabel.font = UIFont.systemFont(ofSize: 10, weight: .bold)
+        }
+        
 //		Formatting
 		var heavy = !analyst.getCourses().isEmpty
 		if block.id == .lab, let before = self.composite.schedule.getBlockBefore(block) {
@@ -57,8 +70,8 @@ class BlockCell: TableCell {
 		}
 		
 		cell.nameLabel.font = UIFont.systemFont(ofSize: 22, weight: heavy ? .bold : .semibold)
-		cell.nameLabel.textColor = analyst.getColor()
-		
+        cell.nameLabel.textColor = analyst.getColor()
+    
 		cell.tagIcon.image = cell.tagIcon.image!.withRenderingMode(.alwaysTemplate)
 		cell.rightIcon.image = cell.rightIcon.image!.withRenderingMode(.alwaysTemplate)
 		

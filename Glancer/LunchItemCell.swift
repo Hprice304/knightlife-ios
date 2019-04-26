@@ -26,6 +26,8 @@ class LunchItemCell: TableCell {
 			}
 			
 			lunchCell.nameLabel.text = item.name
+            lunchCell.nameLabel.textColor = Scheme.text.color
+            lunchCell.backgroundColor = Scheme.Backgrounddark.color
 			
 			for view in lunchCell.attachmentsStack.arrangedSubviews { lunchCell.attachmentsStack.removeArrangedSubview(view) ; view.removeFromSuperview() }
 			

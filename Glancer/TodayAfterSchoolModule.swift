@@ -46,7 +46,7 @@ class TodayAfterSchoolModule: TableModule {
 		
 		self.addModule(TodayNextDayModule(controller: self.controller, tomorrow: self.tomorrow!))
 		
-		self.addSection().addSpacerCell().setHeight(35)
+		self.addSection().addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
 	}
 	
 }

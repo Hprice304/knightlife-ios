@@ -25,10 +25,16 @@ class SettingsTextCell: TableCell {
 			guard let textCell = cell as? UISettingsTextCell else {
 				return
 			}
-			
+            textCell.backgroundColor = Scheme.Backgrounddark.color
+            textCell.leftLabel.textColor = Scheme.text.color
+            textCell.rightLabel.textColor = Scheme.text.color
 			textCell.leftLabel.text = left
 			textCell.rightLabel.text = right
 		}
+        
+        let selectedBackground = UIView()
+        selectedBackground.backgroundColor = Scheme.spacercolor.color
+
 		
 		self.setSelection() {
 			template, cell in

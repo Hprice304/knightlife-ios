@@ -26,14 +26,14 @@ class TodayBeforeSchoolModule: TableModule {
 	}
 	
 	override func build() {
-		self.addSection().addCell(TodayStatusCell(state: "Before School", minutes: self.minutesUntil, image: UIImage(named: "icon_clock")!, color: UIColor.black.withAlphaComponent(0.3)))
+        self.addSection().addCell(TodayStatusCell(state: "Before School", minutes: self.minutesUntil, image: UIImage(named: "icon_clock")!, color: UIColor.black.withAlphaComponent(0.3), background: Scheme.backgroundColor.color))
 		
 		let upcomingBlocks = self.today.schedule.getBlocks()
 		self.addModule(BlockListModule(controller: self.controller, bundle: self.today, title: nil, blocks: upcomingBlocks, options: [ .topBorder, .bottomBorder ]))
 		
 		self.addModule(AfterSchoolEventsModule(bundle: self.today, title: "After School", options: [ .bottomBorder ]))
 		
-		self.addSection().addSpacerCell().setHeight(35)
+		self.addSection().addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 }

@@ -319,7 +319,7 @@ class NotificationManager: Manager, PushRefreshListener {
 			content.title = "Get to Class"
 		}
 		
-		content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default()
 		content.body = "5 min until \(analyst.getDisplayName())"
 		
 		content.threadIdentifier = "schedule"
@@ -359,7 +359,7 @@ class NotificationManager: Manager, PushRefreshListener {
 			content.title = "End of Class"
 		}
 		
-		content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default()
 		content.body = "\(analyst.getDisplayName()) ends in 2 min"
 		
 		content.threadIdentifier = "schedule"
