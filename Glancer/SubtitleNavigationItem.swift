@@ -19,13 +19,13 @@ class SubtitleNavigationItem: UINavigationItem {
 		didSet {
 			self.titleLabel.isHidden = self.title == nil
 			self.titleLabel.text = self.title
-            self.titleLabel.textColor = Scheme.text.color
+            self.titleLabel.textColor = Scheme.navtext.color
 		}
 	}
 	
-    @IBInspectable var titleColor: UIColor = Scheme.text.color {
+    @IBInspectable var titleColor: UIColor = Scheme.navtext.color {
         didSet {
-            self.titleLabel.textColor = Scheme.text.color
+            self.titleLabel.textColor = Scheme.navtext.color
         }
     }
     
@@ -33,13 +33,13 @@ class SubtitleNavigationItem: UINavigationItem {
 		didSet {
 			self.subtitleLabel.isHidden = self.subtitle == nil
 			self.subtitleLabel.text = self.subtitle
-            self.subtitleLabel.textColor = Scheme.text.color
+            self.subtitleLabel.textColor = Scheme.navtext.color
 		}
 	}
 	
-	@IBInspectable var subtitleColor: UIColor = Scheme.text.color {
+	@IBInspectable var subtitleColor: UIColor = Scheme.navtext.color {
 		didSet {
-			self.subtitleLabel.textColor = Scheme.text.color
+			self.subtitleLabel.textColor = Scheme.navtext.color
 		}
 	}
 	
@@ -59,12 +59,12 @@ class SubtitleNavigationItem: UINavigationItem {
 		stackView.alignment = .center
 		
 		let titleLabel = UILabel()
-		titleLabel.textColor = Scheme.text.color
+		titleLabel.textColor = Scheme.navtext.color
 		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
 		titleLabel.text = self.title
 		
 		let subtitleLabel = UILabel()
-		subtitleLabel.textColor = Scheme.text.color
+		subtitleLabel.textColor = Scheme.navtext.color
 		subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
 		subtitleLabel.text = self.subtitle
 		
