@@ -28,8 +28,6 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
-        let mySwitch = UISwitch()
-        mySwitch.addTarget(self, action: #selector(self.loadData), for: .touchUpInside)
         
 	}
 	
@@ -39,15 +37,12 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
 		self.tableHandler.reload()
 	}
     
-    @objc func loadData() {
-        tableView.reloadData()
-    }
+    
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
 		layout.addModule(CoursesPrefModule(controller: self))

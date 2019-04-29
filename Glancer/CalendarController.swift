@@ -37,6 +37,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 		self.calendarView.controller = self
@@ -44,7 +45,10 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
+        
         
 		self.fetchUpcoming {
 			self.tableHandler.reload()
@@ -60,7 +64,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tableView.backgroundColor = Scheme.Backgrounddark.color
-        
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
 		self.calendarView.setupViews()
@@ -86,6 +89,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 			formatter.dateFormat = "MMMM"
 			navigation.subtitle = "\(formatter.string(from: Date.today))"
             navigation.subtitleColor = Scheme.text.color
+            navigation.titleColor = Scheme.text.color
 		}
 	}
 	
