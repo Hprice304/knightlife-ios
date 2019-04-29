@@ -46,7 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 		_ = CourseManager.instance
 		_ = LunchManager.instance
 		_ = EventManager.instance
-		
+		_ = DarkManager.instance
+        
+        
         return true
     }
 	

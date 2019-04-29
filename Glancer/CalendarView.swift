@@ -70,7 +70,7 @@ class CalendarView: UIView {
                             button.setTitleColor(Scheme.lightText.color, for: .normal)
                             label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
                         } else {
-                            button.setTitleColor(Scheme.text.color, for: .normal)
+                            button.setTitleColor(Scheme.navtext.color, for: .normal)
                             label.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
                         }
                     }

@@ -2,18 +2,18 @@
 //  ShowDarkStorage.swift
 //  Glancer
 //
-//  Created by Henry Price on 4/26/19.
+//  Created by Henry Price on 4/29/19.
 //  Copyright © 2019 Dylan Hanson. All rights reserved.
 //
 
 import Foundation
 import AddictiveLib
 
-class ShowDark: StorageHandler {
+class ShowDarkStorage: StorageHandler {
     
     let manager: DarkManager
     
-    var storageKey: String = "dark.show-view"
+    var storageKey: String = "dark.show-dark"
     
     init(manager: DarkManager) {
         self.manager = manager
@@ -34,6 +34,7 @@ class ShowDark: StorageHandler {
     
     func loadDefaults() {
         self.manager.loadedShowDark(value: true)
+        
     }
     
 }

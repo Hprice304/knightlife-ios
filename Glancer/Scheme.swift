@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 //Dark Mode
 
-
-
 enum Scheme {
     
     case blue
@@ -30,6 +28,9 @@ enum Scheme {
     case hollowText
     case dividerColor
     case text_black
+    
+    case titlecolor
+    case primaryBackground
 
     var color: UIColor {
         switch self {
@@ -44,12 +45,21 @@ enum Scheme {
             else {
                 return UIColor.white
             }
+        case .primaryBackground:
+            if LunchManager.instance.showAllergens == true {
+                return UIColor.black
+            }
+            else {
+                return UIColor(hex: "efeff3")!
+            }
         case .spacercolor:
             if LunchManager.instance.showAllergens == true {
                 return UIColor(hex: "1e1e1f")!
             }
             else {
-                return UIColor(hex: "F8F8FA")!
+                return UIColor(hex: "efeff3")!
+//                efeff3
+//                F8F8FA
             }
         case .backgroundColor:
             return UIColor.groupTableViewBackground
@@ -74,10 +84,15 @@ enum Scheme {
                 return UIColor.white
             }
             else {
-                return UIColor.darkText
+                return UIColor.gray
             }
         case .lightText:
-            return UIColor.lightGray
+            if LunchManager.instance.showAllergens == true {
+                return UIColor.white
+            }
+            else {
+                return UIColor.lightGray
+            }
         case .nullColor:
             if LunchManager.instance.showAllergens == true {
                 return UIColor.white
@@ -98,6 +113,13 @@ enum Scheme {
             }
             else {
                 return UIColor(hex: "E1E1E6")!
+            }
+        case .titlecolor:
+            if LunchManager.instance.showAllergens == true {
+                return UIColor.black
+            }
+            else {
+                return UIColor(hex: "#f8f8f9")!
             }
         }
     }
@@ -122,9 +144,7 @@ enum StyleScheme {
         case .stylecolorblack:
             return UIBarStyle.black
         }
-        
     }
-    
 }
 
 // White mode

@@ -156,10 +156,10 @@ class SettingsClassController: UIViewController, TableHandlerDataSource {
 		
 		notifications.addDivider()
 		
-		notifications.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
+		notifications.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
 		
 		let delete = layout.addSection()
-		delete.addDivider()
+//        delete.addDivider()
 		
 		delete.addCell(SettingsCourseDeleteCell() {
 			self.showDelete()
