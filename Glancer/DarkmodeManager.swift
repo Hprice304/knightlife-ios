@@ -14,15 +14,13 @@ class DarkManager: Manager {
     static let instance = DarkManager()
     
     private(set) var showDark: Bool!
-    let showDarkWatcher = ResourceWatcher<Bool>()
+//    let showDarkWatcher = ResourceWatcher<Bool>()
     
     
     init() {
         super.init("Dark Manager")
-        self.saveStorage()
+        
     }
-    
-
     
     func loadedShowDark(value: Bool) {
         self.showDark = value
@@ -32,7 +30,6 @@ class DarkManager: Manager {
         self.showDark = value
         self.saveStorage()
         
-        self.showDarkWatcher.handle(nil, self.showDark)
     }
     
 }

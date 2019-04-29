@@ -22,6 +22,7 @@ class HubController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
+        
 		self.imageView.hero.modifiers = [HeroModifier.opacity(0.0), HeroModifier.duration(0.8), HeroModifier.scale(0.001)]
 		self.backgroundImage.hero.modifiers = [HeroModifier.duration(1.1), HeroModifier.opacity(0.0)]
 		

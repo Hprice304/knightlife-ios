@@ -34,7 +34,8 @@ class TodayController: DayController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
 		TodayManager.instance.startTimer()
 		self.handleStateChange(state: TodayManager.instance.currentState)
 		

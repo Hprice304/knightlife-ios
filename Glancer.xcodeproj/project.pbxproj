@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22C5639D22738DBB00A9202B /* NightModePrefsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */; };
-		22C5639F2273955100A9202B /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5639E2273955100A9202B /* DarkModeManager.swift */; };
-		22C563A12273959100A9202B /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C563A02273959100A9202B /* ShowDarkStorage.swift */; };
 		5BD072481C74AEB40074B56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD072471C74AEB40074B56D /* Main.storyboard */; };
 		5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD285DC1B03CF29007A0472 /* AppDelegate.swift */; };
 		5BD285E41B03CF29007A0472 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD285E31B03CF29007A0472 /* Images.xcassets */; };
@@ -259,8 +257,6 @@
 /* Begin PBXFileReference section */
 		18D275F10167B98717447A7C /* Pods-TodayWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget.release.xcconfig"; sourceTree = "<group>"; };
 		22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightModePrefsModule.swift; sourceTree = "<group>"; };
-		22C5639E2273955100A9202B /* DarkModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeManager.swift; sourceTree = "<group>"; };
-		22C563A02273959100A9202B /* ShowDarkStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDarkStorage.swift; sourceTree = "<group>"; };
 		2CA411407FAA1EF6BCD02F68 /* Pods_TodayWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B55DC2C1B27B21500D55EB9 /* Glancer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Glancer.entitlements; sourceTree = "<group>"; };
 		5BD072471C74AEB40074B56D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -471,23 +467,6 @@
 				22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */,
 			);
 			name = NightMode;
-			sourceTree = "<group>";
-		};
-		22C563A22273999E00A9202B /* Dark Mode */ = {
-			isa = PBXGroup;
-			children = (
-				22C563A3227399C100A9202B /* Storage */,
-				22C5639E2273955100A9202B /* DarkModeManager.swift */,
-			);
-			name = "Dark Mode";
-			sourceTree = "<group>";
-		};
-		22C563A3227399C100A9202B /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				22C563A02273959100A9202B /* ShowDarkStorage.swift */,
-			);
-			name = Storage;
 			sourceTree = "<group>";
 		};
 		2760815A1B310CA4470DF205 /* Pods */ = {
@@ -1423,7 +1402,6 @@
 		C0CB9C0D1FE4610C00437C5D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				22C563A22273999E00A9202B /* Dark Mode */,
 				C08B7471217A784E00E7BA26 /* Planner */,
 				C0600118211B27F200ECAD1A /* Block Meta */,
 				C0791CA22116B84C0066CE62 /* Push */,
@@ -1787,7 +1765,6 @@
 				C0791CA42116B86F0066CE62 /* PushNotificationManager.swift in Sources */,
 				C09B41D0211378BD00D636D7 /* TableSection+Core.swift in Sources */,
 				C0711B0320DAC3BE009243CC /* TimeDuration.swift in Sources */,
-				22C5639F2273955100A9202B /* DarkModeManager.swift in Sources */,
 				C0791CA62117E7A20066CE62 /* NotificationManager.swift in Sources */,
 				C0BD0F9B2120CAA600C8F403 /* NoticesController.swift in Sources */,
 				5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */,
@@ -1861,7 +1838,6 @@
 				C0FCDBD0210AB5F60080A883 /* EventAttachmentView.swift in Sources */,
 				C0A1FB162001B36C004146CE /* ScheduleVariationStorage.swift in Sources */,
 				C060011E211B291A00ECAD1A /* BlockMetaID.swift in Sources */,
-				22C563A12273959100A9202B /* ShowDarkStorage.swift in Sources */,
 				C0600121211B29C400ECAD1A /* BlockMetaStorage.swift in Sources */,
 				C05F5E851FAE542D00724F42 /* SportSeason.swift in Sources */,
 				C04D1EC4210FD7B90001C99C /* LunchItemCell.swift in Sources */,

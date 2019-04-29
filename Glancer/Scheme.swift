@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 //Dark Mode
 
-var light = false
 
 
 enum Scheme {
@@ -39,14 +38,14 @@ enum Scheme {
         case .main:
             return UIColor.white
         case .Backgrounddark:
-            if LunchManager.instance.showAllergens == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.black
             }
             else {
                 return UIColor.white
             }
         case .spacercolor:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor(hex: "1e1e1f")!
             }
             else {
@@ -55,7 +54,7 @@ enum Scheme {
         case .backgroundColor:
             return UIColor.groupTableViewBackground
         case .darkText:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.white
             }
             else {
@@ -64,14 +63,14 @@ enum Scheme {
         case .text_black:
             return UIColor.black
         case .navtext:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.white
             }
             else {
                 return UIColor.darkText
             }
         case .text:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.white
             }
             else {
@@ -80,21 +79,21 @@ enum Scheme {
         case .lightText:
             return UIColor.lightGray
         case .nullColor:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.white
             }
             else {
                 return UIColor(hex: "848484")!
             }
         case .hollowText:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor.white
             }
             else {
                 return UIColor(hex: "9F9FAA")!
             }
         case .dividerColor:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIColor(hex: "88888b")!
             }
             else {
@@ -114,7 +113,7 @@ enum StyleScheme {
     var styleColor: UIBarStyle {
         switch self {
         case .styleReg:
-            if light == false {
+            if LunchManager.instance.showAllergens == true {
                 return UIBarStyle.black
             }
             else {

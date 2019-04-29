@@ -24,6 +24,7 @@ class LunchController: UIViewController, TableHandlerDataSource {
 		self.tableHandler.dataSource = self
 		
 		self.navigationItem.title = self.menu.title ?? "Lunch"
+        
 
 	}
 	

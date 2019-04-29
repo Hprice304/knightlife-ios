@@ -30,9 +30,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "Day") as? DayController else {
 			return
 		}
-        
-    
-		
 		controller.date = date
 		self.navigationController?.pushViewController(controller, animated: true)
 	}
@@ -43,10 +40,12 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 		self.calendarView.controller = self
+        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-		
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
 		self.fetchUpcoming {
 			self.tableHandler.reload()
 		}
@@ -56,7 +55,14 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-
+        
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
+        
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
 		self.calendarView.setupViews()
 		self.setupNavigation()
 		self.tableHandler.reload()
@@ -70,7 +76,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 			
 			self.calendarView.setupViews()
 			self.setupNavigation()
-			
 			self.tableHandler.reload()
 		}
 	}
@@ -80,6 +85,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 			let formatter = Date.normalizedFormatter
 			formatter.dateFormat = "MMMM"
 			navigation.subtitle = "\(formatter.string(from: Date.today))"
+            navigation.subtitleColor = Scheme.text.color
 		}
 	}
 	

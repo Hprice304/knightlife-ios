@@ -49,7 +49,6 @@ class PrefToggleCell: TableCell {
 		if let senderSwitch = sender as? UISwitch, senderSwitch !== self.personalSwitch {
 			return
 		}
-		
 		if let flip = sender as? UISwitch {
 			self.flipped(flip.isOn)
 		}

@@ -18,8 +18,8 @@ class NightModePrefsModule: TableModule {
         section.addCell(TitleCell(title: "Color Mode"))
         section.addDivider()
         
-        section.addCell(PrefToggleCell(title: "Night Mode", on: DarkManager.instance.showDark) {
-            DarkManager.instance.setShowDark(value: $0)
+        section.addCell(PrefToggleCell(title: "Night Mode", on: LunchManager.instance.showAllergens) {
+            LunchManager.instance.setShowAllergens(value: $0)
         })
         
         section.addDivider()

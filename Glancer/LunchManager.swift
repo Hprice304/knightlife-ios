@@ -39,7 +39,6 @@ class LunchManager: Manager, PushRefreshListener {
 	func setShowAllergens(value: Bool) {
 		self.showAllergens = value
 		self.saveStorage()
-		
 		self.showAllergensWatcher.handle(nil, self.showAllergens)
 	}
 	

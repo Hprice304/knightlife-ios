@@ -18,19 +18,36 @@ class SettingsController: UIViewController, TableHandlerDataSource {
     
     
 	override func viewDidLoad() {
+        
 		super.viewDidLoad()
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
+        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
+        let mySwitch = UISwitch()
+        mySwitch.addTarget(self, action: #selector(self.loadData), for: .touchUpInside)
+        
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-//        navigationController?.navigationBar.tintColor = Scheme.Backgrounddark.color
+        
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
 		self.tableHandler.reload()
 	}
+    
+    @objc func loadData() {
+        tableView.reloadData()
+    }
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
 		layout.addModule(CoursesPrefModule(controller: self))

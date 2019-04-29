@@ -28,6 +28,7 @@ class ShowDark: StorageHandler {
             self.loadDefaults()
             return
         }
+        
         self.manager.loadedShowDark(value: val)
     }
     

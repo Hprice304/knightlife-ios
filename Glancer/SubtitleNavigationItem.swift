@@ -19,18 +19,25 @@ class SubtitleNavigationItem: UINavigationItem {
 		didSet {
 			self.titleLabel.isHidden = self.title == nil
 			self.titleLabel.text = self.title
+            self.titleLabel.textColor = Scheme.text.color
 		}
 	}
 	
+    @IBInspectable var titleColor: UIColor = Scheme.text.color {
+        didSet {
+            self.titleLabel.textColor = Scheme.text.color
+        }
+    }
     
 	@IBInspectable var subtitle: String? {
 		didSet {
 			self.subtitleLabel.isHidden = self.subtitle == nil
 			self.subtitleLabel.text = self.subtitle
+            self.subtitleLabel.textColor = Scheme.text.color
 		}
 	}
 	
-	@IBInspectable var subtitleColor: UIColor = Scheme.navtext.color {
+	@IBInspectable var subtitleColor: UIColor = Scheme.text.color {
 		didSet {
 			self.subtitleLabel.textColor = Scheme.text.color
 		}
@@ -57,7 +64,7 @@ class SubtitleNavigationItem: UINavigationItem {
 		titleLabel.text = self.title
 		
 		let subtitleLabel = UILabel()
-		subtitleLabel.textColor = self.subtitleColor
+		subtitleLabel.textColor = Scheme.text.color
 		subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
 		subtitleLabel.text = self.subtitle
 		

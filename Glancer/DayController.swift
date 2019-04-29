@@ -24,21 +24,30 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 	var bundleDownloaded: Bool { return bundle != nil || bundleError != nil }
 	
 	override func viewDidLoad() {
+        super.viewDidLoad()
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 		self.registerListeners()
-		self.reloadData()
+		
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        super.viewDidLoad()
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
+        self.reloadData()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {		
 		super.viewWillAppear(animated)
-		
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
 		self.registerListeners()
-		
 		self.tableHandler.reload()
 		self.setupNavigationItem()
 	}

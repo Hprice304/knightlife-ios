@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 				print("Failed to authorize notifications: \(error != nil ? error!.localizedDescription : "None")")
 			}
 		}
+        
+        self.window?.backgroundColor = Scheme.Backgrounddark.color
 						
 		_ = NotificationManager.instance
 		

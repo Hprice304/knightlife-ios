@@ -34,6 +34,7 @@ class ShowAllergyStorage: StorageHandler {
 	
 	func loadDefaults() {
 		self.manager.loadedShowAllergens(value: true)
+        
 	}
 	
 }
