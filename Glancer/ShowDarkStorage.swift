@@ -13,7 +13,7 @@ class ShowDarkStorage: StorageHandler {
     
     let manager: DarkManager
     
-    var storageKey: String = "dark.show-dark"
+    var storageKey: String = "color.show-dark"
     
     init(manager: DarkManager) {
         self.manager = manager

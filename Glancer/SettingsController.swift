@@ -28,7 +28,6 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
-        
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +41,6 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 		self.tableHandler.reload()
 	}
     
-    
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
 		layout.addModule(CoursesPrefModule(controller: self))
@@ -53,7 +51,9 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         layout.addModule(NightModePrefsModule())
 		layout.addModule(BottomPrefsModule())
 	}
-	
+
+    
+    
 	@IBAction func surveyClicked(_ sender: Any) {
 		if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
 			SurveyWebCall(version: text).callback() {

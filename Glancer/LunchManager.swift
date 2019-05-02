@@ -45,6 +45,7 @@ class LunchManager: Manager, PushRefreshListener {
 	func getCachedMenu(date: Date) -> LunchMenu? {
 		return self.lunches[date.webSafeDate]
 	}
+    
 	
 	func getLunchWatcher(date: Date) -> ResourceWatcher<LunchMenu> {
 		if self.lunchWatchers[date.webSafeDate] == nil {

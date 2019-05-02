@@ -40,13 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.window?.backgroundColor = Scheme.Backgrounddark.color
 						
 		_ = NotificationManager.instance
-		
 		_ = TodayManager.instance
 		_ = ScheduleManager.instance
 		_ = CourseManager.instance
 		_ = LunchManager.instance
 		_ = EventManager.instance
-		_ = DarkManager.instance
+        _ = DarkManager.instance
         
         
         return true

@@ -18,7 +18,6 @@ class DarkManager: Manager {
     
     init() {
         super.init("Dark Manager")
-        
         self.registerStorage(ShowDarkStorage(manager: self))
     }
     
