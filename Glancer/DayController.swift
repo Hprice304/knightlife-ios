@@ -29,7 +29,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		self.tableHandler.dataSource = self
 		self.registerListeners()
 		
-        self.view.backgroundColor = Scheme.primaryBackground.color
+        self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tableView.backgroundColor = Scheme.Backgrounddark.color

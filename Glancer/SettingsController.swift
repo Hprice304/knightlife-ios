@@ -48,11 +48,9 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 		layout.addModule(VariationPrefsModule())
 		layout.addModule(EventsPrefsModule(controller: self))
 		layout.addModule(LunchPrefsModule())
-        layout.addModule(NightModePrefsModule())
+        layout.addModule(NightModePrefsModule(controller: self))
 		layout.addModule(BottomPrefsModule())
 	}
-
-    
     
 	@IBAction func surveyClicked(_ sender: Any) {
 		if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {

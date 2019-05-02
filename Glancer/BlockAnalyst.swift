@@ -90,7 +90,7 @@ class BlockAnalyst {
 			return blockMeta.color
 		}
 		
-		return Scheme.nullColor.color
+		return UIColor(hex: "848484")!
 	}
 	
 	func getLocation() -> String? {

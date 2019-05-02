@@ -10,8 +10,6 @@
 		22B600382277735B00D076D0 /* DarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B600372277735B00D076D0 /* DarkManager.swift */; };
 		22B6003B2277743A00D076D0 /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6003A2277743A00D076D0 /* ShowDarkStorage.swift */; };
 		22C5639D22738DBB00A9202B /* NightModePrefsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5639C22738DBB00A9202B /* NightModePrefsModule.swift */; };
-		22EFDAFA2279EB200069FB28 /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B6003A2277743A00D076D0 /* ShowDarkStorage.swift */; };
-		22EFDAFB2279EB220069FB28 /* DarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B600372277735B00D076D0 /* DarkManager.swift */; };
 		5BD072481C74AEB40074B56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD072471C74AEB40074B56D /* Main.storyboard */; };
 		5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD285DC1B03CF29007A0472 /* AppDelegate.swift */; };
 		5BD285E41B03CF29007A0472 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD285E31B03CF29007A0472 /* Images.xcassets */; };
@@ -59,7 +57,6 @@
 		C01A6C722118CA1F000B7442 /* BlockCourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B7A101FCE0C71007C735C /* BlockCourseList.swift */; };
 		C01A6C732118CA1F000B7442 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00232A41FA37E760019D328 /* Course.swift */; };
 		C01A6C742118CA1F000B7442 /* CourseSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00232A61FA37EFC0019D328 /* CourseSchedule.swift */; };
-		C01A6C752118CA2D000B7442 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C176581FAA5F450059E956 /* Scheme.swift */; };
 		C01A6C762118CA3F000B7442 /* GetMenuWebCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081C2EC1FE45120008073F3 /* GetMenuWebCall.swift */; };
 		C01A6C772118CA3F000B7442 /* LunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081C2E71FE450F0008073F3 /* LunchManager.swift */; };
 		C01A6C782118CA3F000B7442 /* LunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081C2E91FE45108008073F3 /* LunchMenu.swift */; };
@@ -1898,7 +1895,6 @@
 				C0CF76F7211E24C800EC35B4 /* InClassView.swift in Sources */,
 				C01A6C772118CA3F000B7442 /* LunchManager.swift in Sources */,
 				C01A6C7D2118CA6F000B7442 /* Storage.swift in Sources */,
-				22EFDAFA2279EB200069FB28 /* ShowDarkStorage.swift in Sources */,
 				C0600123211B2BC400ECAD1A /* BlockMeta.swift in Sources */,
 				C01A6C702118CA1A000B7442 /* CourseManager.swift in Sources */,
 				C01A6C6B2118C9D3000B7442 /* GetScheduleWebCall.swift in Sources */,
@@ -1910,7 +1906,6 @@
 				C01A6C5D2118C99B000B7442 /* EventManager.swift in Sources */,
 				C080E83E211E320D000A67DB /* BetweenClassView.swift in Sources */,
 				C01A6C732118CA1F000B7442 /* Course.swift in Sources */,
-				22EFDAFB2279EB220069FB28 /* DarkManager.swift in Sources */,
 				C01A6C672118C9C7000B7442 /* BlockAnalyst.swift in Sources */,
 				C01A6C6C2118C9E5000B7442 /* KnightlifePayload.swift in Sources */,
 				C01A6C5C2118C989000B7442 /* DayBundle.swift in Sources */,
@@ -1938,7 +1933,6 @@
 				C03BA79021209DAA00AB9DA2 /* PushRefreshListener.swift in Sources */,
 				C03BA78B21209AE400AB9DA2 /* PushUnboxRefresh.swift in Sources */,
 				C01A6C6F2118CA08000B7442 /* DayPayload.swift in Sources */,
-				C01A6C752118CA2D000B7442 /* Scheme.swift in Sources */,
 				C02E5552211FA34B00043C9E /* EventGradeStorage.swift in Sources */,
 				C01A6C652118C9BA000B7442 /* TimeDuration.swift in Sources */,
 				C01A6C782118CA3F000B7442 /* LunchMenu.swift in Sources */,

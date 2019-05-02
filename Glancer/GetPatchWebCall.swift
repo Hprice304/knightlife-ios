@@ -48,7 +48,7 @@ class GetPatchWebCall: UnboxWebCall<KnightlifePayload<PatchDatePayload>, DateSch
 			let duration = TimeDuration(start: adjustedStart, end: adjustedEnd)
 			let custom: CustomBlockMeta? = {
 				if let responseCustom = responseBlock.custom {
-					return CustomBlockMeta(name: responseCustom.name, color: UIColor(hex: responseCustom.color) ?? Scheme.darkText.color, location: responseCustom.location)
+					return CustomBlockMeta(name: responseCustom.name, color: UIColor(hex: responseCustom.color) ?? UIColor.darkText, location: responseCustom.location)
 				}
 				return nil
 			}()

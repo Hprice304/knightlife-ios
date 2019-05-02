@@ -30,6 +30,7 @@ enum Scheme {
     
     case titlecolor
     case primaryBackground
+    case barNullColor
 
     var color: UIColor {
         switch self {
@@ -118,6 +119,8 @@ enum Scheme {
             else {
                 return UIColor(hex: "#f8f8f9")!
             }
+        case .barNullColor:
+            return UIColor(hex: "848484")!
         }
     }
 }

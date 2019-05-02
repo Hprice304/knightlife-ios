@@ -14,7 +14,7 @@ class Course {
 	var name: String // Course name
 	var courseSchedule: CourseSchedule
 	
-	var color: UIColor = Scheme.nullColor.color
+	var color: UIColor = UIColor(hex: "848484")!
 	var location: String?
 	
 	var showBeforeClassNotifications: Bool = true

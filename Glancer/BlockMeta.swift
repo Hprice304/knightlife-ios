@@ -22,7 +22,7 @@ class BlockMeta {
 	init(block: BlockMetaID, color: UIColor? = nil, beforeClassNotifications: Bool? = nil, afterClassNotifications: Bool? = nil, customName: String? = nil) {
 		self.block = block
 		
-		self.color = color ?? Scheme.nullColor.color
+		self.color = color ?? UIColor(hex: "848484")!
 		
 		self.beforeClassNotifications = beforeClassNotifications ?? true
 		self.afterClassNotifications = afterClassNotifications ?? false
