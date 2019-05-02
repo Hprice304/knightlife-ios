@@ -43,12 +43,14 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		self.calendarView.controller = self
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
+        
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        self.tableView.backgroundColor = Scheme.Backgrounddark.color
+        
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
-        
+        calendarView.backgroundColor = Scheme.Backgrounddark.color
         
 		self.fetchUpcoming {
 			self.tableHandler.reload()
@@ -61,11 +63,14 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		super.viewWillAppear(animated)
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
+        
+        
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tableView.backgroundColor = Scheme.Backgrounddark.color
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
+        calendarView.backgroundColor = Scheme.Backgrounddark.color
         
 		self.calendarView.setupViews()
 		self.setupNavigation()

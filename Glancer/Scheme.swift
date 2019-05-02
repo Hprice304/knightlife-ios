@@ -81,7 +81,7 @@ enum Scheme {
                 return UIColor.white
             }
             else {
-                return UIColor.gray
+                return UIColor.darkGray
             }
         case .lightText:
             if DarkManager.instance.showDark == true {
