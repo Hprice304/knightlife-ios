@@ -34,6 +34,4 @@ class NightModePrefsModule: TableModule {
         section.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
     }
     
-
-
 }

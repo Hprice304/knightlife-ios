@@ -47,6 +47,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="nothingLabel" destination="DxP-Nx-uHc" id="2Xr-SY-kTM"/>
+                <outlet property="shieldIcon" destination="KjB-PL-keW" id="s1B-VI-JaX"/>
             </connections>
         </view>
     </objects>

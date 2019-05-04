@@ -40,6 +40,7 @@ class BlockCell: TableCell {
 		let analyst = BlockAnalyst(schedule: self.composite.schedule, block: self.composite.block)
 		let block = self.composite.block
 		
+        
 //		Setup
 		cell.nameLabel.text = analyst.getDisplayName()
 		cell.blockNameLabel.text = block.id.displayName
@@ -57,7 +58,7 @@ class BlockCell: TableCell {
         cell.toLabel.textColor = Scheme.lightText.color
         
         
-        if cell.blockNameLabel.textColor == UIColor.lightGray {
+        if cell.blockNameLabel.textColor == Scheme.text_black.color {
             cell.blockNameLabel.font = UIFont.systemFont(ofSize: 10, weight: .bold)
         }
         

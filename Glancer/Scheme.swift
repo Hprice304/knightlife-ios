@@ -69,7 +69,12 @@ enum Scheme {
                 return UIColor.darkText
             }
         case .text_black:
-            return UIColor.black
+            if DarkManager.instance.showDark == true {
+                return UIColor.white
+            }
+            else {
+                return UIColor.lightGray
+            }
         case .navtext:
             if DarkManager.instance.showDark == true {
                 return UIColor.white
