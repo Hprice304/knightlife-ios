@@ -73,11 +73,6 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         let snowDays = 1
         let url = URL(string: "https://www.snowdaycalculator.com/prediction.php?zipcode=02138&snowdays=\(snowDays)&extra=-0.4&")!
         if UIApplication.shared.canOpenURL(url) {
-//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            //If you want handle the completion block than
-//            UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
-//                print("Open url : \(success)")
-//            })
             let safariController = SFSafariViewController(url: url)
             self.present(safariController, animated: true, completion: nil)
         }
