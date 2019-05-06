@@ -25,7 +25,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		self.tableHandler = TableHandler(table: self.tableView)
+        self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 		self.registerListeners()
 		
