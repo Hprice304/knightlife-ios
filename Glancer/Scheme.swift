@@ -32,6 +32,11 @@ enum Scheme {
     case primaryBackground
     case barNullColor
     
+//    How this works
+//    Darkmanager.instance.show returns a boolean value
+//    which changes the color scheme of everything
+//    DarkManager.swift controlls that switch
+
     var color: UIColor {
         switch self {
         case .blue:
