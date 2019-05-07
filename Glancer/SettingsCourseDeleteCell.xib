@@ -34,7 +34,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="3yU-FM-Wsf"/>
             <connections>
-                <outlet property="rcView" destination="8FR-WG-gmG" id="NCt-eP-bYb"/>
+                <outlet property="rcView" destination="8FR-WG-gmG" id="gmK-YR-zvc"/>
             </connections>
             <point key="canvasLocation" x="-84" y="-174.51274362818592"/>
         </view>

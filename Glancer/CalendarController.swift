@@ -30,6 +30,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "Day") as? DayController else {
 			return
 		}
+		
 		controller.date = date
 		self.navigationController?.pushViewController(controller, animated: true)
 	}
@@ -37,9 +38,9 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
+				
 		self.calendarView.controller = self
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
@@ -51,7 +52,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
         calendarView.backgroundColor = Scheme.Backgrounddark.color
-        
+		
 		self.fetchUpcoming {
 			self.tableHandler.reload()
 		}
@@ -61,6 +62,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
         
@@ -74,6 +76,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
         
 		self.calendarView.setupViews()
 		self.setupNavigation()
+
 		self.tableHandler.reload()
 	}
 
@@ -85,6 +88,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 			
 			self.calendarView.setupViews()
 			self.setupNavigation()
+			
 			self.tableHandler.reload()
 		}
 	}
@@ -94,8 +98,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 			let formatter = Date.normalizedFormatter
 			formatter.dateFormat = "MMMM"
 			navigation.subtitle = "\(formatter.string(from: Date.today))"
-            navigation.subtitleColor = Scheme.text.color
-            navigation.titleColor = Scheme.text.color
 		}
 	}
 	
@@ -227,7 +229,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		
 		let newSection = layout.addSection()
 		newSection.addDivider()
-		newSection.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
+		newSection.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
 	}
 	
 	func reloadData() {

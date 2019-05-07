@@ -122,7 +122,7 @@ enum Scheme {
                 return UIColor.black
             }
             else {
-                return UIColor(hex: "#f8f8f9")!
+                return UIColor(hex: "#f8f8fa")!
             }
         case .barNullColor:
             return UIColor(hex: "848484")!

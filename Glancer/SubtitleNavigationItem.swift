@@ -22,13 +22,13 @@ class SubtitleNavigationItem: UINavigationItem {
             self.titleLabel.textColor = Scheme.navtext.color
 		}
 	}
-	
+    
     @IBInspectable var titleColor: UIColor = Scheme.navtext.color {
         didSet {
             self.titleLabel.textColor = Scheme.navtext.color
         }
     }
-    
+	
 	@IBInspectable var subtitle: String? {
 		didSet {
 			self.subtitleLabel.isHidden = self.subtitle == nil
@@ -53,36 +53,36 @@ class SubtitleNavigationItem: UINavigationItem {
 		self.setup()
 	}
 	
-	private func setup() {
-		let stackView = UIStackView()
-		stackView.axis = .vertical
-		stackView.alignment = .center
-		
-		let titleLabel = UILabel()
-		titleLabel.textColor = Scheme.navtext.color
-		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-		titleLabel.text = self.title
-		
-		let subtitleLabel = UILabel()
-		subtitleLabel.textColor = Scheme.navtext.color
-		subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-		subtitleLabel.text = self.subtitle
-		
-		self.titleLabel = titleLabel
-		self.subtitleLabel = subtitleLabel
-		
-		stackView.addArrangedSubview(titleLabel)
-		stackView.addArrangedSubview(subtitleLabel)
-		
-		let spacer = UIView()
-		spacer.snp.makeConstraints() {
-			constrain in
-			constrain.height.equalTo(2)
-		}
-		stackView.addArrangedSubview(spacer)
-
-		self.titleView = stackView
-	}
+    private func setup() {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        
+        let titleLabel = UILabel()
+        titleLabel.textColor = Scheme.navtext.color
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        titleLabel.text = self.title
+        
+        let subtitleLabel = UILabel()
+        subtitleLabel.textColor = Scheme.navtext.color
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        subtitleLabel.text = self.subtitle
+        
+        self.titleLabel = titleLabel
+        self.subtitleLabel = subtitleLabel
+        
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(subtitleLabel)
+        
+        let spacer = UIView()
+        spacer.snp.makeConstraints() {
+            constrain in
+            constrain.height.equalTo(2)
+        }
+        stackView.addArrangedSubview(spacer)
+        
+        self.titleView = stackView
+    }
 	
 
 	

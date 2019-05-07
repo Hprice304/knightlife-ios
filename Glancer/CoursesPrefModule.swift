@@ -62,6 +62,9 @@ class CoursesPrefModule: TableModule {
 			
 			textField.placeholder = "e.g. English"
 			
+			NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidChange, object: textField, queue: OperationQueue.main) { (notification) in
+				saveAction.isEnabled = textField.text!.trimmingCharacters(in: .whitespaces).count > 0
+			}
 		})
 		
 		self.controller.present(alert, animated: true)

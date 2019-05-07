@@ -21,7 +21,7 @@ class TabController: UITabBarController {
 		super.viewDidLoad()
         
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
+		
 		self.hero.modalAnimationType = .fade
 		self.hero.tabBarAnimationType = .none
 		

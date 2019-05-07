@@ -39,13 +39,13 @@ class LunchManager: Manager, PushRefreshListener {
 	func setShowAllergens(value: Bool) {
 		self.showAllergens = value
 		self.saveStorage()
+		
 		self.showAllergensWatcher.handle(nil, self.showAllergens)
 	}
 	
 	func getCachedMenu(date: Date) -> LunchMenu? {
 		return self.lunches[date.webSafeDate]
 	}
-    
 	
 	func getLunchWatcher(date: Date) -> ResourceWatcher<LunchMenu> {
 		if self.lunchWatchers[date.webSafeDate] == nil {

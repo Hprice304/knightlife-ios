@@ -32,17 +32,14 @@
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could not load data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMp-Ag-D4L">
                                     <rect key="frame" x="0.0" y="0.0" width="147.5" height="19.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-SE-SN5">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-SE-SN5">
                                     <rect key="frame" x="19.5" y="19.5" width="108.5" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                     </subviews>
                 </stackView>
@@ -55,9 +52,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="reK-Mw-Jg8"/>
             <connections>
-                <outlet property="errorIcon" destination="swX-5Y-GDc" id="mW7-YT-eqg"/>
-                <outlet property="notLoad" destination="SMp-Ag-D4L" id="xQE-he-AhQ"/>
-                <outlet property="tryAgain" destination="eb3-SE-SN5" id="IJg-ZU-eq2"/>
+                <outlet property="errorIcon" destination="swX-5Y-GDc" id="u9D-3H-m5r"/>
+                <outlet property="notLoad" destination="SMp-Ag-D4L" id="wGM-tP-Sxa"/>
+                <outlet property="tryAgain" destination="eb3-SE-SN5" id="ibd-Hz-4W1"/>
             </connections>
             <point key="canvasLocation" x="-418.5" y="-187"/>
         </view>

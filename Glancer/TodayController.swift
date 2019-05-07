@@ -63,8 +63,6 @@ class TodayController: DayController {
 		self.setupMailButtonItem()
 		
 		self.navigationItem.title = "Today"
-        
-        
 		
 		if let subtitleItem = self.navigationItem as? SubtitleNavigationItem {
 			if let bundle = self.bundle {

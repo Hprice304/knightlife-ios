@@ -31,10 +31,6 @@ class SettingsTextCell: TableCell {
 			textCell.leftLabel.text = left
 			textCell.rightLabel.text = right
 		}
-        
-        let selectedBackground = UIView()
-        selectedBackground.backgroundColor = Scheme.spacercolor.color
-
 		
 		self.setSelection() {
 			template, cell in

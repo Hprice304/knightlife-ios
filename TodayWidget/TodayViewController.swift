@@ -72,6 +72,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
 		BlockMetaManager.instance.loadStorage()
 		CourseManager.instance.loadStorage()
+		
 		TodayManager.instance.reloadTodayBundle() {
 			success in
 			

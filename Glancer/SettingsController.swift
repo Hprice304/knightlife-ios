@@ -15,11 +15,10 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 	
 	@IBOutlet weak var tableView: UITableView!
 	private(set) var tableHandler: TableHandler!
-    
-    
+	
 	override func viewDidLoad() {
-        
 		super.viewDidLoad()
+		
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
         
@@ -27,12 +26,11 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-        
+		
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
@@ -40,7 +38,6 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         
 		self.tableHandler.reload()
 	}
-    
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
 		layout.addModule(CoursesPrefModule(controller: self))
@@ -51,7 +48,7 @@ class SettingsController: UIViewController, TableHandlerDataSource {
         layout.addModule(NightModePrefsModule(controller: self))
 		layout.addModule(BottomPrefsModule())
 	}
-    
+	
 	@IBAction func surveyClicked(_ sender: Any) {
 		if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
 			SurveyWebCall(version: text).callback() {
@@ -69,13 +66,5 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 			}.execute()
 		}
 	}
-    @IBAction func snowDayCalc(_ sender: Any) {
-        let snowDays = 1
-        let url = URL(string: "https://www.snowdaycalculator.com/prediction.php?zipcode=02138&snowdays=\(snowDays)&extra=-0.4&")!
-        if UIApplication.shared.canOpenURL(url) {
-            let safariController = SFSafariViewController(url: url)
-            self.present(safariController, animated: true, completion: nil)
-        }
-    }
-    
+	
 }

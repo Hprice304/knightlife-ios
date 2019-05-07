@@ -22,9 +22,6 @@ class PrefToggleCell: TableCell {
 		
 		self.setSelectionStyle(.none)
 		self.setHeight(47)
-        
-        
-        
 		
 		self.setCallback() {
 			template, cell in
@@ -32,9 +29,10 @@ class PrefToggleCell: TableCell {
 			guard let toggleCell = cell as? UIPrefToggleCell else {
 				return
 			}
-            toggleCell.backgroundColor = Scheme.Backgrounddark.color
 			
-			toggleCell.title.text = title
+            toggleCell.backgroundColor = Scheme.Backgrounddark.color
+            
+            toggleCell.title.text = title
             toggleCell.title.textColor = Scheme.text.color
 			
 			self.personalSwitch = toggleCell.switch
@@ -49,6 +47,7 @@ class PrefToggleCell: TableCell {
 		if let senderSwitch = sender as? UISwitch, senderSwitch !== self.personalSwitch {
 			return
 		}
+		
 		if let flip = sender as? UISwitch {
 			self.flipped(flip.isOn)
 		}

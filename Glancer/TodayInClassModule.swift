@@ -31,7 +31,7 @@ class TodayInClassModule: TableModule {
 		let analyst = BlockAnalyst(schedule: bundle.schedule, block: current)
 		
 		let todaySection = self.addSection()
-        todaySection.addCell(TodayStatusCell(state: "in \(analyst.getDisplayName())", minutes: self.minutesLeft, image: UIImage(named: "icon_clock")!, color: analyst.getColor(), background: UIColor.clear))
+		todaySection.addCell(TodayStatusCell(state: "in \(analyst.getDisplayName())", minutes: self.minutesLeft, image: UIImage(named: "icon_clock")!, color: analyst.getColor()))
 		
 		let secondPassed = Calendar.normalizedCalendar.dateComponents([.second], from: current.time.start, to: Date.today).second!
 		let secondDuration = Calendar.normalizedCalendar.dateComponents([.second], from: current.time.start, to: current.time.end).second!
@@ -54,7 +54,7 @@ class TodayInClassModule: TableModule {
 			self.addModule(AfterSchoolEventsModule(bundle: self.bundle, title: "After School", options: [ .bottomBorder ]))
 		}
 		
-		self.addSection().addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
+		self.addSection().addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 
 	}
 	

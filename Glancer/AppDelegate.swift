@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 	
     var window: UIWindow?
 	
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		Globals.setData("debug", data: false)
 		
 		Globals.BundleID = "MAD.BBN.KnightLife"
@@ -36,26 +36,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 				print("Failed to authorize notifications: \(error != nil ? error!.localizedDescription : "None")")
 			}
 		}
-        
-        self.window?.backgroundColor = Scheme.Backgrounddark.color
 						
 		_ = NotificationManager.instance
+		
 		_ = TodayManager.instance
 		_ = ScheduleManager.instance
 		_ = CourseManager.instance
 		_ = LunchManager.instance
 		_ = EventManager.instance
         _ = DarkManager.instance
-        
-        
+		
         return true
     }
 	
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
         var tokenString = ""
-        
-        
         
         for i in 0..<deviceToken.count {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])

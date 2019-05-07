@@ -12,37 +12,37 @@ import AddictiveLib
 
 class CoursePrefCell: TableCell {
 	
-	init(module: CoursesPrefModule, course: Course) {
-		super.init("coursepref", nib: "CoursePrefCell")
-		
-		self.setHeight(44)
-		
-		self.setSelection() {
-			template, cell in
-			
-			module.presentCourse(course: course)
-		}
-		
-		self.setCallback() {
-			template, cell in
-			
-			guard let prefCell = cell as? UICoursePrefCell else {
-				return
-			}
-			
-			prefCell.backgroundColor = Scheme.Backgrounddark.color
-
-			prefCell.blockStack.isHidden = false
-			
-			prefCell.titleLabel.text = course.name
-			prefCell.titleLabel.textColor = course.color
-			
-			prefCell.blockLabel.text = course.courseSchedule.block.displayName
+    init(module: CoursesPrefModule, course: Course) {
+        super.init("coursepref", nib: "CoursePrefCell")
+        
+        self.setHeight(44)
+        
+        self.setSelection() {
+            template, cell in
+            
+            module.presentCourse(course: course)
+        }
+        
+        self.setCallback() {
+            template, cell in
+            
+            guard let prefCell = cell as? UICoursePrefCell else {
+                return
+            }
+            
+            prefCell.backgroundColor = Scheme.Backgrounddark.color
+            
+            prefCell.blockStack.isHidden = false
+            
+            prefCell.titleLabel.text = course.name
+            prefCell.titleLabel.textColor = course.color
+            
+            prefCell.blockLabel.text = course.courseSchedule.block.displayName
             prefCell.blockLabel.textColor = Scheme.text.color
-			
-			prefCell.tagImage.image = prefCell.tagImage.image?.withRenderingMode(.alwaysTemplate)
-		}
-	}
+            
+            prefCell.tagImage.image = prefCell.tagImage.image?.withRenderingMode(.alwaysTemplate)
+        }
+    }
 	
 }
 

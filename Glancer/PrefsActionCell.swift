@@ -25,8 +25,7 @@ class PrefsActionCell: TableCell {
 		
 		self.setEstimatedHeight(32)
 		self.setSelectionStyle(.none)
-    
-        
+		
 		self.setCallback() {
 			template, cell in
 			
@@ -34,7 +33,7 @@ class PrefsActionCell: TableCell {
 				return
 			}
 			
-			prefsCell.backgroundColor = Scheme.spacercolor.color
+            prefsCell.backgroundColor = Scheme.spacercolor.color
             prefsCell.actionButton.setTitleColor(Scheme.main.color, for: .normal)
 		
 			prefsCell.actionButton.setTitle(self.title.uppercased(), for: .normal)

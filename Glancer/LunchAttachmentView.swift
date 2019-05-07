@@ -32,7 +32,6 @@ class LunchAttachmentView: AttachmentView {
 	
 	private func setup() {
 		self.style = .BLUE
-        
 		
 		if let name = self.menuName {
 			self.text = "\(name) menu available"

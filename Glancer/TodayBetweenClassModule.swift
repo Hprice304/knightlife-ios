@@ -31,7 +31,7 @@ class TodayBetweenClassModule: TableModule {
 		let state = analyst.getCourse() == nil ? "\(analyst.getDisplayName()) starting soon" : "Get to \(analyst.getDisplayName())"
 		
 		let todaySection = self.addSection()
-        todaySection.addCell(TodayStatusCell(state: state, minutes: self.minutesUntil, image: UIImage(named: "icon_class")!, color: analyst.getColor(), background: UIColor.clear))
+		todaySection.addCell(TodayStatusCell(state: state, minutes: self.minutesUntil, image: UIImage(named: "icon_class")!, color: analyst.getColor()))
 		
 		self.addModule(BlockListModule(controller: self.controller, bundle: self.bundle, title: nil, blocks: [ self.nextBlock ], options: [ .topBorder, .bottomBorder ]))
 		

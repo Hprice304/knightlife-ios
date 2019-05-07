@@ -18,15 +18,18 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		self.tableHandler = TableHandler(table: self.tableView)
+		self.tableHandler.dataSource = self
+        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-		self.tableHandler.dataSource = self
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		
 		self.navigationItem.title = self.meta.block.displayName
 		self.tableHandler.reload()
 	}
@@ -52,7 +55,7 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 			})
 			about.addDivider()
 			
-			about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35 / 2)
+			about.addSpacerCell().setBackgroundColor(.clear).setHeight(35 / 2)
 			
 			about.addDivider()
 		}
@@ -74,7 +77,7 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 		})
 		
 		about.addDivider()
-		about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
+		about.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
 		
 		let notifications = layout.addSection()
 		
@@ -100,7 +103,7 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 		
 		notifications.addDivider()
 		
-		notifications.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
+		notifications.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
 	}
 	
 	private func showChangeName() {

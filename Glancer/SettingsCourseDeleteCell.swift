@@ -12,7 +12,6 @@ import AddictiveLib
 
 class SettingsCourseDeleteCell: TableCell {
 	
-
 	init(clicked: @escaping () -> Void) {
 		super.init("coursedelete", nib: "SettingsCourseDeleteCell")
 		
@@ -24,7 +23,9 @@ class SettingsCourseDeleteCell: TableCell {
             }
             todayCell.rcView.backgroundColor = Scheme.Backgrounddark.color
         }
+        
 		self.setHeight(44)
+		
 		self.setSelection() {
 			_, _ in
 			
@@ -37,6 +38,6 @@ class SettingsCourseDeleteCell: TableCell {
 class UISettingsCourseDeleteCell: UITableViewCell {
 	
     @IBOutlet weak var rcView: UIView!
-	
+    
 	
 }
