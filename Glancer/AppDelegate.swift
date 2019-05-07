@@ -41,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 		}
 						
 		_ = NotificationManager.instance
-		
 		_ = TodayManager.instance
 		_ = ScheduleManager.instance
 		_ = CourseM

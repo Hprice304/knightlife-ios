@@ -10,12 +10,12 @@
 		22AB6EC22281E5A600590B1D /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC12281E5A600590B1D /* ShowDarkStorage.swift */; };
 		22AB6EC52281E5FB00590B1D /* NightModePrefsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC42281E5FB00590B1D /* NightModePrefsModule.swift */; };
 		22AB6EC72281E86F00590B1D /* DarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC62281E86F00590B1D /* DarkManager.swift */; };
-		22AB6EC92281F73100590B1D /* SettingsCourseDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC82281F73100590B1D /* SettingsCourseDeleteCell.swift */; };
-		22AB6ECB2281F74A00590B1D /* SettingsCourseDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6ECA2281F74A00590B1D /* SettingsCourseDeleteCell.xib */; };
-		22AB6ECD2281F77D00590B1D /* SettingsCourseColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6ECC2281F77C00590B1D /* SettingsCourseColorCell.swift */; };
-		22AB6ECF2281F78800590B1D /* SettingsCourseColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6ECE2281F78800590B1D /* SettingsCourseColorCell.xib */; };
-		22AB6ED22281F7F400590B1D /* NothingUpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6ED02281F7F400590B1D /* NothingUpcomingCell.xib */; };
-		22AB6ED32281F7F400590B1D /* NothingUpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6ED12281F7F400590B1D /* NothingUpcomingCell.swift */; };
+		22AB6ED92282130900590B1D /* SettingsCourseDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6ED82282130900590B1D /* SettingsCourseDeleteCell.swift */; };
+		22AB6EDB2282131700590B1D /* SettingsCourseDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6EDA2282131700590B1D /* SettingsCourseDeleteCell.xib */; };
+		22AB6EDD2282132800590B1D /* NothingUpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EDC2282132800590B1D /* NothingUpcomingCell.swift */; };
+		22AB6EDF2282132E00590B1D /* NothingUpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6EDE2282132E00590B1D /* NothingUpcomingCell.xib */; };
+		22AB6EE22282135B00590B1D /* SettingsCourseColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EE02282135B00590B1D /* SettingsCourseColorCell.swift */; };
+		22AB6EE32282135B00590B1D /* SettingsCourseColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AB6EE12282135B00590B1D /* SettingsCourseColorCell.xib */; };
 		5BD072481C74AEB40074B56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD072471C74AEB40074B56D /* Main.storyboard */; };
 		5BD285DD1B03CF29007A0472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD285DC1B03CF29007A0472 /* AppDelegate.swift */; };
 		5BD285E41B03CF29007A0472 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD285E31B03CF29007A0472 /* Images.xcassets */; };
@@ -253,12 +253,12 @@
 		22AB6EC12281E5A600590B1D /* ShowDarkStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDarkStorage.swift; sourceTree = "<group>"; };
 		22AB6EC42281E5FB00590B1D /* NightModePrefsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightModePrefsModule.swift; sourceTree = "<group>"; };
 		22AB6EC62281E86F00590B1D /* DarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkManager.swift; sourceTree = "<group>"; };
-		22AB6EC82281F73100590B1D /* SettingsCourseDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsCourseDeleteCell.swift; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/SettingsCourseDeleteCell.swift"; sourceTree = "<group>"; };
-		22AB6ECA2281F74A00590B1D /* SettingsCourseDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsCourseDeleteCell.xib; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/SettingsCourseDeleteCell.xib"; sourceTree = "<group>"; };
-		22AB6ECC2281F77C00590B1D /* SettingsCourseColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsCourseColorCell.swift; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/SettingsCourseColorCell.swift"; sourceTree = "<group>"; };
-		22AB6ECE2281F78800590B1D /* SettingsCourseColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsCourseColorCell.xib; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/SettingsCourseColorCell.xib"; sourceTree = "<group>"; };
-		22AB6ED02281F7F400590B1D /* NothingUpcomingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NothingUpcomingCell.xib; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/NothingUpcomingCell.xib"; sourceTree = "<group>"; };
-		22AB6ED12281F7F400590B1D /* NothingUpcomingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NothingUpcomingCell.swift; path = "../../../../Users/henryprice/Desktop/knightlife-ios/Glancer/NothingUpcomingCell.swift"; sourceTree = "<group>"; };
+		22AB6ED82282130900590B1D /* SettingsCourseDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsCourseDeleteCell.swift; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/SettingsCourseDeleteCell.swift"; sourceTree = "<group>"; };
+		22AB6EDA2282131700590B1D /* SettingsCourseDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsCourseDeleteCell.xib; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/SettingsCourseDeleteCell.xib"; sourceTree = "<group>"; };
+		22AB6EDC2282132800590B1D /* NothingUpcomingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NothingUpcomingCell.swift; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/NothingUpcomingCell.swift"; sourceTree = "<group>"; };
+		22AB6EDE2282132E00590B1D /* NothingUpcomingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NothingUpcomingCell.xib; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/NothingUpcomingCell.xib"; sourceTree = "<group>"; };
+		22AB6EE02282135B00590B1D /* SettingsCourseColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsCourseColorCell.swift; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/SettingsCourseColorCell.swift"; sourceTree = "<group>"; };
+		22AB6EE12282135B00590B1D /* SettingsCourseColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsCourseColorCell.xib; path = "../../../../../Volumes/Disk 2/.Trashes/501/knightlife-ios-newpush/Glancer/SettingsCourseColorCell.xib"; sourceTree = "<group>"; };
 		2CA411407FAA1EF6BCD02F68 /* Pods_TodayWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B55DC2C1B27B21500D55EB9 /* Glancer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Glancer.entitlements; sourceTree = "<group>"; };
 		5BD072471C74AEB40074B56D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -872,8 +872,8 @@
 		C0679140211B5B1800628098 /* Delete */ = {
 			isa = PBXGroup;
 			children = (
-				22AB6EC82281F73100590B1D /* SettingsCourseDeleteCell.swift */,
-				22AB6ECA2281F74A00590B1D /* SettingsCourseDeleteCell.xib */,
+				22AB6ED82282130900590B1D /* SettingsCourseDeleteCell.swift */,
+				22AB6EDA2282131700590B1D /* SettingsCourseDeleteCell.xib */,
 			);
 			name = Delete;
 			sourceTree = "<group>";
@@ -1045,8 +1045,8 @@
 		C0A1233E2115FF2B00A72CD8 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				22AB6ECC2281F77C00590B1D /* SettingsCourseColorCell.swift */,
-				22AB6ECE2281F78800590B1D /* SettingsCourseColorCell.xib */,
+				22AB6EE02282135B00590B1D /* SettingsCourseColorCell.swift */,
+				22AB6EE12282135B00590B1D /* SettingsCourseColorCell.xib */,
 			);
 			name = Color;
 			sourceTree = "<group>";
@@ -1335,8 +1335,8 @@
 		C0C4550D2123B576004A41ED /* Nothing */ = {
 			isa = PBXGroup;
 			children = (
-				22AB6ED12281F7F400590B1D /* NothingUpcomingCell.swift */,
-				22AB6ED02281F7F400590B1D /* NothingUpcomingCell.xib */,
+				22AB6EDC2282132800590B1D /* NothingUpcomingCell.swift */,
+				22AB6EDE2282132E00590B1D /* NothingUpcomingCell.xib */,
 			);
 			name = Nothing;
 			sourceTree = "<group>";
@@ -1578,20 +1578,20 @@
 				C051F1F8210FF957004C064F /* CoursePrefCell.xib in Resources */,
 				C0315D73211B248300323661 /* PrefToggleCell.xib in Resources */,
 				C061F80D2115F91700F0374C /* SettingsTextCell.xib in Resources */,
-				22AB6ED22281F7F400590B1D /* NothingUpcomingCell.xib in Resources */,
 				C08FBF9D210FB290005812F1 /* TodayDoneCell.xib in Resources */,
+				22AB6EE32282135B00590B1D /* SettingsCourseColorCell.xib in Resources */,
 				C0A167AA210E678800DB6BC4 /* ErrorCell.xib in Resources */,
-				22AB6ECB2281F74A00590B1D /* SettingsCourseDeleteCell.xib in Resources */,
 				C0A167B3210E6F3300DB6BC4 /* LoadingCell.xib in Resources */,
 				C0C785B3210FDB88003A5EB8 /* TitleCell.xib in Resources */,
+				22AB6EDF2282132E00590B1D /* NothingUpcomingCell.xib in Resources */,
 				C039C86F211A8CCE008E0AF0 /* SettingsCourseDayCell.xib in Resources */,
 				C04653C6210936AC004AD09C /* BlockCell.xib in Resources */,
 				C0760225210F89FD00398827 /* NoClassCell.xib in Resources */,
 				5BD285E41B03CF29007A0472 /* Images.xcassets in Resources */,
-				22AB6ECF2281F78800590B1D /* SettingsCourseColorCell.xib in Resources */,
 				C019C1611F7D3CED00FC4EED /* Launch.storyboard in Resources */,
 				C0B72226211F44D40095BA70 /* AttachmentCell.xib in Resources */,
 				C0929F432110C61B004A373B /* PrefsActionCell.xib in Resources */,
+				22AB6EDB2282131700590B1D /* SettingsCourseDeleteCell.xib in Resources */,
 				C01862AC2118A29E0042F38A /* TodayBarCell.xib in Resources */,
 				C0BD0FA12120CBED00C8F403 /* NoticeCell.xib in Resources */,
 				C060012B211B2D0D00ECAD1A /* BlocksPrefCell.xib in Resources */,
@@ -1773,6 +1773,7 @@
 				C0C7EA4921135D2400717B53 /* KnightlifePayload.swift in Sources */,
 				C0CB9C151FE4668B00437C5D /* EventAudience.swift in Sources */,
 				C0DF4F04210CEB26002A433C /* DayBundle.swift in Sources */,
+				22AB6EE22282135B00590B1D /* SettingsCourseColorCell.swift in Sources */,
 				C07D9141225EF7E100A59345 /* Callback.swift in Sources */,
 				22AB6EC52281E5FB00590B1D /* NightModePrefsModule.swift in Sources */,
 				C02A2B141FAD527600D3A9CD /* Block.swift in Sources */,
@@ -1785,6 +1786,7 @@
 				C0B7CBE02264DF0200C6EF67 /* Course.swift in Sources */,
 				C0C455162123D414004A41ED /* TimeEventListModule.swift in Sources */,
 				C0107A3B212324D600C9A6D7 /* BottomPrefsModule.swift in Sources */,
+				22AB6EDD2282132800590B1D /* NothingUpcomingCell.swift in Sources */,
 				C0CB9C131FE464D900437C5D /* Event.swift in Sources */,
 				C07D913B225EF7E100A59345 /* Optionals.swift in Sources */,
 				C03BA78F21209DAA00AB9DA2 /* PushRefreshListener.swift in Sources */,
@@ -1799,9 +1801,9 @@
 				C0BD0FA32120CD5D00C8F403 /* NoticeAttachmentView.swift in Sources */,
 				C0FCDBC9210A86000080A883 /* BlockListModule.swift in Sources */,
 				C01ECD392129D1890001C013 /* TodayBeforeSchoolModule.swift in Sources */,
-				22AB6EC92281F73100590B1D /* SettingsCourseDeleteCell.swift in Sources */,
 				C0929F412110C612004A373B /* PrefsActionCell.swift in Sources */,
 				C0A3D57F2109355E004F5049 /* DayController.swift in Sources */,
+				22AB6ED92282130900590B1D /* SettingsCourseDeleteCell.swift in Sources */,
 				C039C86D211A8CC1008E0AF0 /* SettingsCourseDayCell.swift in Sources */,
 				C0B72224211F44CB0095BA70 /* AttachmentCell.swift in Sources */,
 				C02A2B0D1FAD47E400D3A9CD /* GetPatchWebCall.swift in Sources */,
@@ -1812,7 +1814,6 @@
 				C07D912C225EF76700A59345 /* UserDefaults+KL.swift in Sources */,
 				C0600121211B29C400ECAD1A /* BlockMetaStorage.swift in Sources */,
 				C04D1EC4210FD7B90001C99C /* LunchItemCell.swift in Sources */,
-				22AB6ED32281F7F400590B1D /* NothingUpcomingCell.swift in Sources */,
 				C0CB9C191FE468F500437C5D /* GetEventsWebCall.swift in Sources */,
 				C060011C211B28E100ECAD1A /* BlockMetaManager.swift in Sources */,
 				C0CB9C101FE4634000437C5D /* EventManager.swift in Sources */,
@@ -1821,7 +1822,6 @@
 				C006914F210EC55C0099CD57 /* SettingsController.swift in Sources */,
 				C01ECD3B2129D2330001C013 /* TodayBetweenClassModule.swift in Sources */,
 				C0D6E9422107B8AC004BD0F4 /* Date+KL.swift in Sources */,
-				22AB6ECD2281F77D00590B1D /* SettingsCourseColorCell.swift in Sources */,
 				C0C785B0210FD980003A5EB8 /* LunchItemAttachmentView.swift in Sources */,
 				C0711AFA20DAC2DB009243CC /* DayOfWeek.swift in Sources */,
 				C06AE4F521154B79003A1EE8 /* SettingsClassController.swift in Sources */,
