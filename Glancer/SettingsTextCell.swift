@@ -25,6 +25,7 @@ class SettingsTextCell: TableCell {
 			guard let textCell = cell as? UISettingsTextCell else {
 				return
 			}
+            
             textCell.backgroundColor = Scheme.Backgrounddark.color
             textCell.leftLabel.textColor = Scheme.text.color
             textCell.rightLabel.textColor = Scheme.text.color

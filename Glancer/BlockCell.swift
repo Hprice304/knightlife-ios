@@ -39,17 +39,17 @@ class BlockCell: TableCell {
 		let analyst = BlockAnalyst(schedule: self.composite.schedule, block: self.composite.block)
 		let block = self.composite.block
 		
-//		Setup
-		cell.nameLabel.text = analyst.getDisplayName()
-		cell.blockNameLabel.text = block.id.displayName
+        //        Setup
+        cell.nameLabel.text = analyst.getDisplayName()
+        cell.blockNameLabel.text = block.id.displayName
         
         cell.backgroundColor = Scheme.Backgrounddark.color
         cell.attachmentsStack.backgroundColor = Scheme.Backgrounddark.color
-		
-		cell.fromLabel.text = block.time.start.prettyTime
-		cell.toLabel.text = block.time.end.prettyTime
-		
-		cell.locationLabel.text = analyst.getLocation()
+        
+        cell.fromLabel.text = block.time.start.prettyTime
+        cell.toLabel.text = block.time.end.prettyTime
+        
+        cell.locationLabel.text = analyst.getLocation()
         
         //        Coloring
         cell.fromLabel.textColor = Scheme.lightText.color
@@ -81,7 +81,7 @@ class BlockCell: TableCell {
 			if let menu = self.composite.lunch {
 				let lunchView = LunchAttachmentView(menuName: menu.title)
 				lunchView.clickHandler = {
-					self.controller.openLunchMenu(menu: menu)
+					self.controller.openLunch(menu: menu)
 				}
 				cell.attachmentsStack.addArrangedSubview(lunchView)
 			}

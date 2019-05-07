@@ -19,7 +19,11 @@ class NoticesController: UIViewController, TableHandlerDataSource {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 		
@@ -28,7 +32,11 @@ class NoticesController: UIViewController, TableHandlerDataSource {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
 		self.tableHandler.reload()
 	}
 	

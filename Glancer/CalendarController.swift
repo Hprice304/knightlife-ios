@@ -37,21 +37,22 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+        
+        let navigation = self.navigationItem as? SubtitleNavigationItem
+        navigation?.titleColor = Scheme.text.color
+        
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color        
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+        calendarView.backgroundColor = Scheme.Backgrounddark.color
+
+        
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
 				
 		self.calendarView.controller = self
-        
-        self.view.backgroundColor = Scheme.Backgrounddark.color
-        self.tableView.backgroundColor = Scheme.Backgrounddark.color
-        
-        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
-        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        
-        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
-        calendarView.backgroundColor = Scheme.Backgrounddark.color
 		
 		self.fetchUpcoming {
 			self.tableHandler.reload()
@@ -62,18 +63,17 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-
+        
+        let navigation = self.navigationItem as? SubtitleNavigationItem
+        navigation?.titleColor = Scheme.text.color
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
-        
-        
+        self.tableView.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        self.tableView.backgroundColor = Scheme.Backgrounddark.color
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
         calendarView.backgroundColor = Scheme.Backgrounddark.color
-        
+
 		self.calendarView.setupViews()
 		self.setupNavigation()
 
@@ -109,7 +109,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		let refreshControl = UIRefreshControl()
 		self.tableView.refreshControl = refreshControl
 		
-		refreshControl.backgroundColor = .clear
+		refreshControl.backgroundColor = Scheme.Backgrounddark.color
 		refreshControl.tintColor = Scheme.dividerColor.color
 		
 		refreshControl.addTarget(self, action: #selector(self.refreshSubmitted(_:)), for: .valueChanged)
@@ -229,7 +229,7 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
 		
 		let newSection = layout.addSection()
 		newSection.addDivider()
-		newSection.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		newSection.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 	}
 	
 	func reloadData() {

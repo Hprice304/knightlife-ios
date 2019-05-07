@@ -26,6 +26,7 @@ class TitleCell: TableCell {
 			}
 			
 			titleCell.titleLabel.text = title
+            titleCell.titleLabel.textColor = Scheme.darkText.color
 			cell.backgroundColor = Scheme.titlecolor.color
 			
 			titleCell.titleLabel.textAlignment = alignment

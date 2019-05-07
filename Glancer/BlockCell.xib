@@ -130,7 +130,7 @@
                 <outlet property="tagIcon" destination="aRg-nF-ndS" id="L49-Vy-Xug"/>
                 <outlet property="toLabel" destination="D0h-0P-7Wq" id="ED1-gK-rlW"/>
             </connections>
-            <point key="canvasLocation" x="-84.5" y="115"/>
+            <point key="canvasLocation" x="-85.599999999999994" y="114.24287856071965"/>
         </view>
     </objects>
     <resources>

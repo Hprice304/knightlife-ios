@@ -34,6 +34,8 @@ class PrefToggleCell: TableCell {
             
             toggleCell.title.text = title
             toggleCell.title.textColor = Scheme.text.color
+            
+            self.personalSwitch = toggleCell.switch
 			
 			self.personalSwitch = toggleCell.switch
 			toggleCell.switch.removeTarget(self, action: #selector(self.switchFlipped(_:)), for: .valueChanged)

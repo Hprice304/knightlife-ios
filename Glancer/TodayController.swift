@@ -29,13 +29,18 @@ class TodayController: DayController {
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
 		super.viewDidLoad()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+        self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
 		TodayManager.instance.startTimer()
 		self.handleStateChange(state: TodayManager.instance.currentState)
 		

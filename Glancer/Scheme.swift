@@ -12,16 +12,16 @@ import UIKit
 enum Scheme {
     
     case blue
-
+    
     case main
     case spacercolor
     case backgroundColor
-
+    
     case darkText
     case text
     case lightText
     case Backgrounddark
-
+    
     case navtext
     case nullColor
     case hollowText
@@ -31,7 +31,7 @@ enum Scheme {
     case titlecolor
     case primaryBackground
     case barNullColor
-
+    
     var color: UIColor {
         switch self {
         case .blue:

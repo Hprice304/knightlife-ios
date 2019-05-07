@@ -43,7 +43,16 @@
                             <constraint firstAttribute="trailing" secondItem="If6-Ps-yMX" secondAttribute="trailing" id="zie-j5-UFz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Today" id="YkW-HY-8FQ" customClass="SubtitleNavigationItem" customModule="Glancer" customModuleProvider="target"/>
+                    <navigationItem key="navigationItem" title="Today" id="YkW-HY-8FQ" customClass="SubtitleNavigationItem" customModule="Glancer" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="subtitleColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableHeightAnchor" destination="lm6-0W-r8i" id="xzI-H7-drw"/>
                         <outlet property="tableView" destination="If6-Ps-yMX" id="M4q-nH-MQH"/>
@@ -566,6 +575,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Upcoming" id="ZCy-iG-pqn" customClass="SubtitleNavigationItem" customModule="Glancer" customModuleProvider="target">
                         <barButtonItem key="backBarButtonItem" title=" " id="sfi-OA-1uO"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="subtitleColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
                         <outlet property="calendarView" destination="ZyG-on-TVt" id="yD0-Sf-5GJ"/>
@@ -618,7 +635,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKF-iS-nJe">
-                                                    <rect key="frame" x="141" y="2.6666666666666679" width="93" height="30.000000000000004"/>
+                                                    <rect key="frame" x="160.66666666666666" y="2.6666666666666679" width="93" height="30.000000000000004"/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.50588235290000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
@@ -651,7 +668,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-eY-nKp">
-                                                    <rect key="frame" x="163.66666666666666" y="3" width="48" height="29"/>
+                                                    <rect key="frame" x="183" y="3" width="48" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <state key="normal" title="Credits">
                                                         <color key="titleColor" red="0.2666666667" green="0.50588235290000005" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

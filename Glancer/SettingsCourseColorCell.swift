@@ -25,17 +25,12 @@ class SettingsCourseColorCell: TableCell {
 				return
 			}
 			
-            colorCell.colorLabel.textColor = Scheme.text.color
-            colorCell.colorView.backgroundColor = color
-            colorCell.colorView.borderColor = UIColor.white
-            colorCell.colorView.borderWidth = 1/2
-            colorCell.backgroundColor = Scheme.Backgrounddark.color
+			colorCell.colorView.backgroundColor = color
 		}
 		
 		self.setSelection() {
 			template, cell in
 			
-            
 			clicked()
 		}
 	}
@@ -44,8 +39,6 @@ class SettingsCourseColorCell: TableCell {
 
 class UISettingsCourseColorCell: UITableViewCell {
 	
-    @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var colorView: UIView!
-    
-    
+	@IBOutlet weak var colorView: UIView!
+	
 }

@@ -23,7 +23,7 @@ class LoadingCell: TableCell {
 				return
 			}
 			
-			cell.backgroundColor = .clear
+			cell.backgroundColor = Scheme.Backgrounddark.color
 			loading.loadingIcon.layer.opacity = 0.1
 			loading.loadingLabel.layer.opacity = 0.1
 			

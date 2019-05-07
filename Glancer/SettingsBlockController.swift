@@ -18,28 +18,28 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.tableHandler = TableHandler(table: self.tableView)
-		self.tableHandler.dataSource = self
-        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
+		self.tableHandler = TableHandler(table: self.tableView)
+		self.tableHandler.dataSource = self
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
-		self.navigationItem.title = self.meta.block.displayName
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
+		self.navigationItem.title = self.meta.id.displayName
 		self.tableHandler.reload()
 	}
 	
 	private func needsNotificationsUpdate() {
 		NotificationManager.instance.scheduleShallowNotifications()
-	}
-	
-	private func didChangeSettings() {
-		BlockMetaManager.instance.metaChanged(meta: self.meta)
 	}
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
@@ -49,13 +49,13 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 		about.addCell(TitleCell(title: "About"))
 		about.addDivider()
 		
-		if self.meta.block == .free {
+		if self.meta.id == .free {
 			about.addCell(SettingsTextCell(left: "Name", right: self.meta.customName ?? "") {
 				self.showChangeName()
 			})
 			about.addDivider()
 			
-			about.addSpacerCell().setBackgroundColor(.clear).setHeight(35 / 2)
+			about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35 / 2)
 			
 			about.addDivider()
 		}
@@ -70,14 +70,13 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 				color in
 				
 				self.meta.color = color
-				self.didChangeSettings()
 			}
 			
 			self.navigationController?.pushViewController(controller, animated: true)
 		})
 		
 		about.addDivider()
-		about.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		about.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(35)
 		
 		let notifications = layout.addSection()
 		
@@ -85,25 +84,23 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 		notifications.addCell(TitleCell(title: "Notifications"))
 		notifications.addDivider()
 		
-		notifications.addCell(PrefToggleCell(title: "Before Block", on: self.meta.beforeClassNotifications) {
-			self.meta.beforeClassNotifications = $0
+		notifications.addCell(PrefToggleCell(title: "Before Block", on: self.meta.beforeClassNotifications) { flag in
+			self.meta.beforeClassNotifications = flag
 			
-			self.didChangeSettings()
 			self.needsNotificationsUpdate()
 		})
 		
 		notifications.addDivider()
 		
-		notifications.addCell(PrefToggleCell(title: "Block End", on: self.meta.afterClassNotifications) {
-			self.meta.afterClassNotifications = $0
+		notifications.addCell(PrefToggleCell(title: "Block End", on: self.meta.afterClassNotifications) { flag in
+			self.meta.afterClassNotifications = flag
 			
-			self.didChangeSettings()
 			self.needsNotificationsUpdate()
 		})
 		
 		notifications.addDivider()
 		
-		notifications.addSpacerCell().setBackgroundColor(.clear).setHeight(35)
+		notifications.addSpacerCell().setBackgroundColor(Scheme.Backgrounddark.color).setHeight(35)
 	}
 	
 	private func showChangeName() {
@@ -115,9 +112,9 @@ class SettingsBlockController: UIViewController, TableHandlerDataSource {
 				let trimmed = name.trimmingCharacters(in: .whitespaces)
 				
 				self.meta.customName = trimmed.count > 0 ? trimmed : nil
+				
 				self.tableHandler.reload()
 				
-				self.didChangeSettings()
 				self.needsNotificationsUpdate()
 			}
 		})

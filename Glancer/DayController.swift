@@ -25,15 +25,15 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.tableHandler = TableHandler(table: self.tableView)
-		self.tableHandler.dataSource = self
         
-        self.view.backgroundColor = Scheme.Backgrounddark.color
+        tableView.backgroundColor = Scheme.spacercolor.color
+        self.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        self.tableView.backgroundColor = Scheme.Backgrounddark.color
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
+		self.tableHandler = TableHandler(table: self.tableView)
+		self.tableHandler.dataSource = self
 		
 		self.registerListeners()
 		self.reloadData()
@@ -41,14 +41,13 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 	
 	override func viewWillAppear(_ animated: Bool) {		
 		super.viewWillAppear(animated)
-        self.view.backgroundColor = Scheme.Backgrounddark.color
+        
+        tableView.backgroundColor = Scheme.spacercolor.color
+        self.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
-        
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
-        self.tableView.backgroundColor = Scheme.Backgrounddark.color
-        
+
 		self.registerListeners()
 		
 		self.tableHandler.reload()
@@ -225,7 +224,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		layout.addSection().addSpacerCell().setBackgroundColor(.clear).setHeight(35)
 	}
 	
-	func openLunchMenu(menu: LunchMenu) {
+	func openLunch(menu: Lunch) {
 		guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "Lunch") as? LunchController else {
 			return
 		}

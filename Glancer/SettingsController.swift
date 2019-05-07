@@ -16,36 +16,36 @@ class SettingsController: UIViewController, TableHandlerDataSource {
 	@IBOutlet weak var tableView: UITableView!
 	private(set) var tableHandler: TableHandler!
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		self.tableHandler = TableHandler(table: self.tableView)
-		self.tableHandler.dataSource = self
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableHandler = TableHandler(table: self.tableView)
+        self.tableHandler.dataSource = self
         
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         
-		self.tableHandler.reload()
-	}
+        self.tableHandler.reload()
+    }
 	
 	func buildCells(handler: TableHandler, layout: TableLayout) {
 		layout.addModule(CoursesPrefModule(controller: self))
 		layout.addModule(BlockPrefsModule(controller: self))
 		layout.addModule(VariationPrefsModule())
 		layout.addModule(EventsPrefsModule(controller: self))
-		layout.addModule(LunchPrefsModule())
         layout.addModule(NightModePrefsModule(controller: self))
+//		layout.addModule(LunchPrefsModule())
 		layout.addModule(BottomPrefsModule())
 	}
 	

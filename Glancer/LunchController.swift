@@ -12,34 +12,32 @@ import AddictiveLib
 
 class LunchController: UIViewController, TableHandlerDataSource {
 	
-	var menu: LunchMenu!
+	var menu: Lunch!
 	
 	@IBOutlet weak var tableView: UITableView!
 	private var tableHandler: TableHandler!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.tableHandler = TableHandler(table: self.tableView)
-		self.tableHandler.dataSource = self
-		
-		self.navigationItem.title = self.menu.title ?? "Lunch"
-        
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
 
+		self.tableHandler = TableHandler(table: self.tableView)
+		self.tableHandler.dataSource = self
+		
+		self.navigationItem.title = self.menu.title ?? "Lunch"
+
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
-        
+
 		self.tableHandler.reload()
 	}
 	
@@ -49,7 +47,7 @@ class LunchController: UIViewController, TableHandlerDataSource {
 		section.addDivider()
 		
 		for item in self.menu.items {
-			section.addCell(LunchItemCell(item: item, showAllergen: LunchManager.instance.showAllergens))
+			section.addCell(LunchItemCell(item: item, showAllergen: true))
 			section.addDivider()
 		}
 	}

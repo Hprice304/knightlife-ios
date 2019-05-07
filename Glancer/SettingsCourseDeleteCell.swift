@@ -15,15 +15,6 @@ class SettingsCourseDeleteCell: TableCell {
 	init(clicked: @escaping () -> Void) {
 		super.init("coursedelete", nib: "SettingsCourseDeleteCell")
 		
-        self.setCallback() {
-            template, cell in
-            
-            guard let todayCell = cell as? UISettingsCourseDeleteCell else {
-                return
-            }
-            todayCell.rcView.backgroundColor = Scheme.Backgrounddark.color
-        }
-        
 		self.setHeight(44)
 		
 		self.setSelection() {
@@ -37,7 +28,6 @@ class SettingsCourseDeleteCell: TableCell {
 
 class UISettingsCourseDeleteCell: UITableViewCell {
 	
-    @IBOutlet weak var rcView: UIView!
-    
+	
 	
 }

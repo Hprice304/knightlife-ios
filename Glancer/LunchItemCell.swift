@@ -12,7 +12,7 @@ import AddictiveLib
 
 class LunchItemCell: TableCell {
 	
-	init(item: LunchMenuItem, showAllergen: Bool) {
+	init(item: Lunch.Food, showAllergen: Bool) {
 		super.init("item", nib: "LunchItemCell")
 		
 		self.setEstimatedHeight(45)
@@ -25,7 +25,7 @@ class LunchItemCell: TableCell {
 				return
 			}
 			
-			lunchCell.nameLabel.text = item.name
+            lunchCell.nameLabel.text = item.name
             lunchCell.nameLabel.textColor = Scheme.text.color
             lunchCell.backgroundColor = Scheme.Backgrounddark.color
 			

@@ -69,10 +69,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		TodayManager.instance.stopTimer()
 	}
 	
-	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-		BlockMetaManager.instance.loadStorage()
-		CourseManager.instance.loadStorage()
-		
+	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {		
 		TodayManager.instance.reloadTodayBundle() {
 			success in
 			

@@ -21,11 +21,13 @@ class SettingsColorPickerController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.findColorViews()
         self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
+		self.findColorViews()
+		
 		if let colorHex = self.color.toHex, let selectedView = self.colorViews[colorHex] {
 			selectedView.select()
 			self.selected = selectedView
@@ -34,6 +36,11 @@ class SettingsColorPickerController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+        self.view.backgroundColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
+        navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
+        self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
+
 	}
 	
 	private func findColorViews(_ find: UIView? = nil) {
