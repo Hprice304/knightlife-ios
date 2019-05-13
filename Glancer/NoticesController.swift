@@ -50,13 +50,13 @@ class NoticesController: UIViewController, TableHandlerDataSource {
 			section.addCell(TitleCell(title: "Alerts"))
 			section.addDivider()
 			
-			section.addSpacerCell().setBackgroundColor(.white).setHeight(5)
+			section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(5)
 			
 			for notice in highPriority {
 				section.addCell(NoticeCell(notice: notice))
 			}
 			
-			section.addSpacerCell().setBackgroundColor(.white).setHeight(5)
+			section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(5)
 		}
 		
 		if !lowPriority.isEmpty {
@@ -65,13 +65,13 @@ class NoticesController: UIViewController, TableHandlerDataSource {
 			section.addCell(TitleCell(title: "Notices"))
 			section.addDivider()
 			
-			section.addSpacerCell().setBackgroundColor(.white).setHeight(5)
+			section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(5)
 			
 			for notice in lowPriority {
 				section.addCell(NoticeCell(notice: notice))
 			}
 			
-			section.addSpacerCell().setBackgroundColor(.white).setHeight(5)
+			section.addSpacerCell().setBackgroundColor(Scheme.spacercolor.color).setHeight(5)
 		}
 		
 		layout.addSection().addDivider() // Cap off the bottom.
