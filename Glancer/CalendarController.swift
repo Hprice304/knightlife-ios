@@ -47,7 +47,6 @@ class CalendarController: UIViewController, TableHandlerDataSource, ErrorReloada
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
         calendarView.backgroundColor = Scheme.Backgrounddark.color
-
         
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
