@@ -33,6 +33,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="If6-Ps-yMX" firstAttribute="top" secondItem="Ceo-uy-qcQ" secondAttribute="bottom" id="6tF-QO-Ms9"/>
                             <constraint firstItem="mGr-B7-Lse" firstAttribute="top" secondItem="lm6-0W-r8i" secondAttribute="bottom" id="D0E-S1-a92"/>
@@ -86,6 +87,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BlV-qQ-P4i" firstAttribute="top" secondItem="9Np-Mr-bXp" secondAttribute="bottom" id="9kI-Ou-Pjr"/>
                             <constraint firstItem="7jh-yO-goe" firstAttribute="top" secondItem="9Np-Mr-bXp" secondAttribute="bottom" id="JPV-ZG-5D5"/>

@@ -27,7 +27,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		super.viewDidLoad()
         
         tableView.backgroundColor = Scheme.spacercolor.color
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
@@ -43,7 +43,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 		super.viewWillAppear(animated)
         
         tableView.backgroundColor = Scheme.spacercolor.color
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barTintColor = Scheme.Backgrounddark.color
         navigationController?.navigationBar.barStyle = StyleScheme.styleReg.styleColor
         self.tabBarController?.tabBar.barTintColor = Scheme.Backgrounddark.color
