@@ -70,7 +70,6 @@ enum Scheme {
                 return UIColor.white
             }
             else {
-//                return UIColor.lightGray
                 return UIColor(hex: "9e9ea3")!
             }
         case .navtext:
