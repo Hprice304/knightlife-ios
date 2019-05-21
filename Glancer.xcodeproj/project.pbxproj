@@ -176,7 +176,6 @@
 		C0A3D57F2109355E004F5049 /* DayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A3D57E2109355E004F5049 /* DayController.swift */; };
 		C0A5F023210B9FBA00606ED3 /* BlockPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A5F022210B9FBA00606ED3 /* BlockPayload.swift */; };
 		C0A5F025210BA22200606ED3 /* DayPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A5F024210BA22200606ED3 /* DayPayload.swift */; };
-		C0A9294E225DA04300CE2D12 /* TableSection+KL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B41CF211378BD00D636D7 /* TableSection+KL.swift */; };
 		C0AA2FE92120FBAA0009C686 /* SpecialSchedulesWebCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA2FE82120FBAA0009C686 /* SpecialSchedulesWebCall.swift */; };
 		C0AB03552122556400FA5412 /* HubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB03542122556400FA5412 /* HubController.swift */; };
 		C0AC3FCA211B2F2400401FB8 /* SettingsBlockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC3FC9211B2F2400401FB8 /* SettingsBlockController.swift */; };
@@ -1883,7 +1882,6 @@
 				C07D9144225EF7E100A59345 /* Decodable.swift in Sources */,
 				C0B7CBE12264DF0200C6EF67 /* Course.swift in Sources */,
 				C01A6C6F2118CA08000B7442 /* DayPayload.swift in Sources */,
-				C0A9294E225DA04300CE2D12 /* TableSection+KL.swift in Sources */,
 				C07D9140225EF7E100A59345 /* BadgeTetheredPreferences.swift in Sources */,
 				C01A6C652118C9BA000B7442 /* TimeDuration.swift in Sources */,
 				C01A6C4E2118C892000B7442 /* TodayViewController.swift in Sources */,

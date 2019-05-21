@@ -13,7 +13,7 @@ extension TableSection {
 	
 	@discardableResult
 	func addDivider() -> TableCell {
-		return self.addDividerCell(left: 0, right: 0, backgroundColor: UIColor.clear, insetColor: UIColor(hex: "E1E1E6")!)
+		return self.addDividerCell(left: 0, right: 0, backgroundColor: UIColor.clear, insetColor: Scheme.dividerColor.color)
 	}
 	
 }

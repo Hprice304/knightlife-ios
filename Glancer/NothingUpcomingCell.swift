@@ -25,9 +25,9 @@ class NothingUpcomingCell: TableCell {
                 return
             }
             
-            prefCell.nothingLabel.textColor = Scheme.darkText.color
+            prefCell.nothingLabel.textColor = Scheme.navtext.color
             prefCell.shieldIcon.image = prefCell.shieldIcon.image?.withRenderingMode(.alwaysTemplate)
-            prefCell.shieldIcon.tintColor = Scheme.darkText.color
+            prefCell.shieldIcon.tintColor = Scheme.navtext.color
             prefCell.backgroundColor = Scheme.Backgrounddark.color
         }
     }

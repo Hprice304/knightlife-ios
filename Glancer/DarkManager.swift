@@ -8,26 +8,37 @@
 
 import Foundation
 import AddictiveLib
+import SwiftyUserDefaults
+import Signals
 
-class DarkManager: Manager {
+extension DefaultsKeys {
+    
+    static fileprivate let userDarkModeToggle = DefaultsKey<Bool>("toggles.darkmode")
+    
+}
+
+class DarkManager {
    
     static let instance = DarkManager()
     
-    private(set) var showDark: Bool!
-    let showDarkWatcher = ResourceWatcher<Bool>()
+    let showDarkWatcher = Signal<Bool>()
+    
+    var showDark: Bool {
+        get {
+            return Defaults[.userDarkModeToggle]
+        }
+        
+        set {
+            Defaults[.userDarkModeToggle] = newValue
+            self.showDarkWatcher.fire(newValue)
+            
+            return
+        }
+        
+    }
     
     init() {
-        super.init("Dark Manager")
-        self.registerStorage(ShowDarkStorage(manager: self))
+        
     }
     
-    func loadedShowDark(value: Bool) {
-        self.showDark = value
-    }
-    
-    func setShowDark(value: Bool) {
-        self.showDark = value
-        self.saveStorage()
-        self.showDarkWatcher.handle(nil, self.showDark)
-    }
 }

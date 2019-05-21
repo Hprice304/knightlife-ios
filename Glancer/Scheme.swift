@@ -17,7 +17,6 @@ enum Scheme {
     case spacercolor
     case backgroundColor
     
-    case darkText
     case text
     case lightText
     case Backgrounddark
@@ -66,19 +65,13 @@ enum Scheme {
             }
         case .backgroundColor:
             return UIColor.groupTableViewBackground
-        case .darkText:
-            if DarkManager.instance.showDark == true {
-                return UIColor.white
-            }
-            else {
-                return UIColor.darkText
-            }
         case .text_black:
             if DarkManager.instance.showDark == true {
                 return UIColor.white
             }
             else {
-                return UIColor.lightGray
+//                return UIColor.lightGray
+                return UIColor(hex: "9e9ea3")!
             }
         case .navtext:
             if DarkManager.instance.showDark == true {
@@ -117,7 +110,7 @@ enum Scheme {
             }
         case .dividerColor:
             if DarkManager.instance.showDark == true {
-                return UIColor(hex: "88888b")!
+                return UIColor.darkGray
             }
             else {
                 return UIColor(hex: "E1E1E6")!
