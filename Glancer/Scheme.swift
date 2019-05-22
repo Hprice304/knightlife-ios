@@ -44,21 +44,24 @@ enum Scheme {
             return UIColor.white
         case .Backgrounddark:
             if DarkManager.instance.showDark == true {
-                return UIColor.black
+//                return UIColor.black
+                return UIColor(hex: "051126")! // Blue Testing  000B2F
             }
             else {
                 return UIColor.white
             }
         case .primaryBackground:
             if DarkManager.instance.showDark == true {
-                return UIColor.black
+//                return UIColor.black
+                return UIColor(hex: "051126")! // Blue Testing 051126
             }
             else {
                 return UIColor(hex: "efeff3")!
             }
         case .spacercolor:
             if DarkManager.instance.showDark == true {
-                return UIColor(hex: "1e1e1f")!
+//                return UIColor(hex: "1e1e1f")!
+                return UIColor(hex: "000d23")! // Blue Testing  001428
             }
             else {
                 return UIColor(hex: "efeff3")!
@@ -116,7 +119,8 @@ enum Scheme {
             }
         case .titlecolor:
             if DarkManager.instance.showDark == true {
-                return UIColor.black
+//                return UIColor.black
+                return UIColor(hex: "051126")!  // Blue Testing 000e2b, 051126
             }
             else {
                 return UIColor(hex: "#f8f8fa")!
