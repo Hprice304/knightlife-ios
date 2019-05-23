@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2255DACA2296F3D000686A57 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2255DAC92296F3D000686A57 /* Themes.swift */; };
 		22AB6EC22281E5A600590B1D /* ShowDarkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC12281E5A600590B1D /* ShowDarkStorage.swift */; };
 		22AB6EC52281E5FB00590B1D /* NightModePrefsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC42281E5FB00590B1D /* NightModePrefsModule.swift */; };
 		22AB6EC72281E86F00590B1D /* DarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB6EC62281E86F00590B1D /* DarkManager.swift */; };
@@ -249,6 +250,7 @@
 
 /* Begin PBXFileReference section */
 		18D275F10167B98717447A7C /* Pods-TodayWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayWidget/Pods-TodayWidget.release.xcconfig"; sourceTree = "<group>"; };
+		2255DAC92296F3D000686A57 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		22AB6EC12281E5A600590B1D /* ShowDarkStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDarkStorage.swift; sourceTree = "<group>"; };
 		22AB6EC42281E5FB00590B1D /* NightModePrefsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightModePrefsModule.swift; sourceTree = "<group>"; };
 		22AB6EC62281E86F00590B1D /* DarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkManager.swift; sourceTree = "<group>"; };
@@ -1159,6 +1161,7 @@
 			children = (
 				C0C176581FAA5F450059E956 /* Scheme.swift */,
 				C07D912E225EF78200A59345 /* Grade.swift */,
+				2255DAC92296F3D000686A57 /* Themes.swift */,
 				C07D9131225EF78B00A59345 /* Networking Targets */,
 				C0A92946225D9EE000CE2D12 /* Date */,
 			);
@@ -1716,6 +1719,7 @@
 				C02E5555211FA44000043C9E /* EventsPrefsModule.swift in Sources */,
 				C0A3D57C21093545004F5049 /* TodayController.swift in Sources */,
 				C05BD67D2110EDA200B5B399 /* LunchPrefsModule.swift in Sources */,
+				2255DACA2296F3D000686A57 /* Themes.swift in Sources */,
 				C0C785B5210FDB8E003A5EB8 /* TitleCell.swift in Sources */,
 				C07147EC2277769F0008EC0C /* LunchPushListener.swift in Sources */,
 				C07D9133225EF7A200A59345 /* API.swift in Sources */,

@@ -43,25 +43,31 @@ enum Scheme {
         case .main:
             return UIColor.white
         case .Backgrounddark:
-            if DarkManager.instance.showDark == true {
-//                return UIColor.black
+            if Theme.userTheme == Theme.blue {
                 return UIColor(hex: "051126")! // Blue Testing  000B2F
+            }
+            if Theme.userTheme == Theme.black {
+                return UIColor.black
             }
             else {
                 return UIColor.white
             }
         case .primaryBackground:
-            if DarkManager.instance.showDark == true {
-//                return UIColor.black
+            if Theme.userTheme == Theme.blue {
                 return UIColor(hex: "051126")! // Blue Testing 051126
+            }
+            if Theme.userTheme == Theme.black {
+                return UIColor.black
             }
             else {
                 return UIColor(hex: "efeff3")!
             }
         case .spacercolor:
-            if DarkManager.instance.showDark == true {
-//                return UIColor(hex: "1e1e1f")!
+            if Theme.userTheme == Theme.blue {
                 return UIColor(hex: "000d23")! // Blue Testing  001428
+            }
+            if Theme.userTheme == Theme.black {
+                return UIColor(hex: "1e1e1f")!
             }
             else {
                 return UIColor(hex: "efeff3")!
@@ -69,58 +75,60 @@ enum Scheme {
         case .backgroundColor:
             return UIColor.groupTableViewBackground
         case .text_black:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.white
             }
             else {
                 return UIColor(hex: "9e9ea3")!
             }
         case .navtext:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.white
             }
             else {
                 return UIColor.darkText
             }
         case .text:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.white
             }
             else {
                 return UIColor.darkGray
             }
         case .lightText:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.lightGray
             }
             else {
                 return UIColor.lightGray
             }
         case .nullColor:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.white
             }
             else {
                 return UIColor(hex: "848484")!
             }
         case .hollowText:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.white
             }
             else {
                 return UIColor(hex: "9F9FAA")!
             }
         case .dividerColor:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIColor.darkGray
             }
             else {
                 return UIColor(hex: "E1E1E6")!
             }
         case .titlecolor:
-            if DarkManager.instance.showDark == true {
-//                return UIColor.black
+            if Theme.userTheme == Theme.blue {
                 return UIColor(hex: "051126")!  // Blue Testing 000e2b, 051126
+            }
+            if Theme.userTheme == Theme.black {
+                return UIColor.black
             }
             else {
                 return UIColor(hex: "#f8f8fa")!
@@ -141,7 +149,7 @@ enum StyleScheme {
     var styleColor: UIBarStyle {
         switch self {
         case .styleReg:
-            if DarkManager.instance.showDark == true {
+            if Theme.userTheme == Theme.blue || Theme.userTheme == Theme.black {
                 return UIBarStyle.black
             }
             else {

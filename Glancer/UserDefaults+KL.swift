@@ -17,5 +17,7 @@ extension DefaultsKeys {
 	static let deviceId = DefaultsKey<String>("deviceId")
 	
 	static let userGrade = DefaultsKey<Int?>("userGrade")
+    
+    static let userTheme = DefaultsKey<Int?>("userTheme")
 	
 }

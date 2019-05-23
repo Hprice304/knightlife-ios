@@ -26,6 +26,8 @@ class EventsPrefsModule: TableModule {
 		
 		section.addCell(SettingsTextCell(left: "Your Grade", right: Grade.userGrade == nil ? "Not Set" : Grade.userGrade!.singular) {
 			self.showChangeGrade()
+            self.controller.tableHandler.reload()
+            self.controller.viewWillAppear(true)
 		})
 		
 		section.addDivider()
