@@ -24,8 +24,6 @@ class NightModePrefsModule: TableModule {
         section.addCell(TitleCell(title: "Color Mode"))
         section.addDivider()
         
-//        let darkmode = DarkManager.instance.showDark
-        
         section.addCell(SettingsTextCell(left: "Theme", right: Theme.userTheme == nil ? "White" : Theme.userTheme!.singular) {
             self.showChangeTheme()
         })
@@ -35,7 +33,7 @@ class NightModePrefsModule: TableModule {
     }
     
     private func showChangeTheme() {
-        let alert = UIAlertController(title: "Theme", message: "Setting this ensures you will only see events that are relevant to you.", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Theme", message: "Changes the Theme for Knightlife", preferredStyle: .actionSheet)
         
         //        Array of tuples instead of dictionary so that it retains its order
         var blockActions: [(id: Theme, alert: UIAlertAction)] = []

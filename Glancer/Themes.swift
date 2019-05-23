@@ -40,22 +40,8 @@ extension Theme {
     
     static var userTheme: Theme? {
         get {
-            // Not yet migrated so fetch via legacy
-//            if !Defaults[.themeMigratedToRealm] {
-//                let legacyTheme = Defaults[.themeLegacy]
-//
-//                if let theme = Theme(rawValue: legacyTheme - 1) {
-//                    // Save legacy in new value
-//                    Defaults[.userTheme] = theme.rawValue
-//
-//                    print("Loaded user legacy theme \( theme.singular )")
-//
-//                    return theme
-//                }
-//            }
             return Theme(rawValue: Defaults[.userTheme] ?? -1)
         }
-        
         set {
             // Set migrated to true so we don't accidentally overwrite new settings
             Defaults[.themeMigratedToRealm] = true
