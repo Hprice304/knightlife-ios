@@ -31,6 +31,16 @@ class ErrorCell: TableCell {
 			template, cell in
 			
 			cell.backgroundColor = Scheme.Backgrounddark.color
+            
+            guard let prefCell = cell as? UIErrorCell else {
+                return
+            }
+            
+            prefCell.cloudError.image = prefCell.cloudError.image?.withRenderingMode(.alwaysTemplate)
+            prefCell.cloudError.tintColor = Scheme.navtext.color
+            prefCell.notLoad.textColor = Scheme.navtext.color
+            prefCell.tryAgain.textColor = Scheme.navtext.color
+            
 		}
 	}
 	
@@ -38,6 +48,9 @@ class ErrorCell: TableCell {
 
 class UIErrorCell: UITableViewCell {
 	
-	
+    @IBOutlet weak var cloudError: UIImageView!
+    @IBOutlet weak var notLoad: UILabel!
+    @IBOutlet weak var tryAgain: UILabel!
+    
 	
 }
