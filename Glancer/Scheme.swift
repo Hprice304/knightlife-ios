@@ -128,7 +128,7 @@ enum Scheme {
                 return UIColor(hex: "051126")!  // Blue Testing 000e2b, 051126
             }
             if Theme.userTheme == Theme.black {
-                return UIColor.black
+                return UIColor(hex: "111111")!
             }
             else {
                 return UIColor(hex: "#f8f8fa")!
