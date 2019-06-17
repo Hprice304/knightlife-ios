@@ -38,6 +38,7 @@ class AttachmentCell: TableCell {
 			}
 			
 			cell.selectable = selectable
+            cell.backgroundColor = Scheme.Backgrounddark.color
 			
 			for subview in cell.attachmentStack.arrangedSubviews { subview.removeFromSuperview() }
 			
@@ -61,12 +62,12 @@ class UIAttachmentCell: UITableViewCell {
 		}
 		
 		if !animated {
-			self.backgroundColor = selected ? Scheme.backgroundColor.color : .white
+			self.backgroundColor = selected ? Scheme.Backgrounddark.color : .white
 			return
 		}
 
 		UIView.animate(withDuration: 0.4) {
-			self.backgroundColor = selected ? Scheme.backgroundColor.color : .white
+			self.backgroundColor = selected ? Scheme.Backgrounddark.color : .white
 		}
 	}
 	
@@ -77,12 +78,12 @@ class UIAttachmentCell: UITableViewCell {
 		}
 		
 		if !animated {
-			self.backgroundColor = highlighted ? Scheme.backgroundColor.color : .white
+			self.backgroundColor = highlighted ? Scheme.Backgrounddark.color : .white
 			return
 		}
 
 		UIView.animate(withDuration: 0.4) {
-			self.backgroundColor = highlighted ? Scheme.backgroundColor.color: .white
+			self.backgroundColor = highlighted ? Scheme.Backgrounddark.color: .white
 		}
 	}
 	

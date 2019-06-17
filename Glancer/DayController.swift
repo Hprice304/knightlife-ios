@@ -34,7 +34,7 @@ class DayController: UIViewController, TableHandlerDataSource, ErrorReloadable {
 
 		self.tableHandler = TableHandler(table: self.tableView)
 		self.tableHandler.dataSource = self
-		
+		 
 		self.registerListeners()
 		self.reloadData()
 	}
